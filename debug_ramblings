@@ -20,6 +20,7 @@ step 1: can i make a serve route thing that when you go to it,
 
  Step 2: Figure out where to host this permanently (so it can write files to the podcast engine location).
  use ffmpeg to transcode wav files to ogg and mp3 (i have magic spells, copy how they work but with a set file name)
+ done()
  pick final file name (hello_butler_bot). also generate .json files (with transcript in it and gigglesnort)
 
  Step 3: write the server to take in input and update the wav file based on it.
