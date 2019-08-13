@@ -11,6 +11,8 @@ abstract class FFMPEGWrapper {
     static void convertWavToMP3AndOGG(String fileName, String finalLocation) async {
         Process pwd =  await Process.start('ffmpeg', <String>["-i","-nostdin", "-y", "$fileName.wav","-acodec", "libvorbis","${finalLocation}${fileName}.ogg"]);
         Process pwd2 =  await Process.start('ffmpeg', <String>["-i","-nostdin", "-y","$fileName.wav","${finalLocation}${fileName}.mp3"]);
+        await pwd.exitCode;
+        await pwd2.exitCode;
         return;
 
     }
