@@ -13,7 +13,9 @@ abstract class TestHandler {
             print("About to test $i ${new DateTime.now()}");
             //ProcessResult ret = await Process.run('sleep', <String>["3"]);
             //print("output is: ${ret.stdout}");
-            await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot",".");
+            await TextWriter.writeLocal("test.txt","${new DateTime.now().hour}:${new DateTime.now().minute} o'clock. Hello World. It's working.");
+            await WaveWriter.writeLocal("test");
+            await FFMPEGWrapper.convertWavToMP3AndOGG("test",".");
             print("Done testing $i ${new DateTime.now()}");
         }
 
