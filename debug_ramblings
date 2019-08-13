@@ -22,6 +22,9 @@ step 1: can i make a serve route thing that when you go to it,
  use ffmpeg to transcode wav files to ogg and mp3 (i have magic spells, copy how they work but with a set file name)
  done()
  pick final file name (hello_butler_bot). also generate .json files (with transcript in it and gigglesnort)
+ done
+
+ EMERGENCY 2.5: figure out how to make dart ACTUALLY wait for a process to complete, not just move ahead
 
  Step 3: write the server to take in input and update the wav file based on it.
 
