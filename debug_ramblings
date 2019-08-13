@@ -1,0 +1,15 @@
+https://askubuntu.com/questions/501910/how-to-text-to-speech-output-using-command-line
+
+Write a server to:
+* uses this TTS library I already have working on the FF server
+* when it gets input, figures out what the response should be (ask pl for chat bot code from 404 page, make persona the GuideBot (but they are a Butler, not a Guide (did you know in the Bad Old Days they often had citizens of my bio selves caste be butlers? ) also it keeps saying JR as junior and i love it)
+* write the response to a .txt file (to get for subtitles)
+* use the .txt file to create a TTS wav file
+* use ffmpeg to transcode the .wav file to mp3 and ogg formats (and shove where podcasts go ). have all three files be called something like hello_guide_bot
+* create a simple front end where it prints out the last asked question and the response to it.  (and a button to listen to it)
+* for the front end, poll (or query with no time out) the server for new responses. if you recieve one, play the .wav file and print out the new subtitles
+* confirm the mp3 and ogg files work with the podcast engine
+* have the passphrase leak into lomat
+
+step 1: can i make a serve route thing that when you go to it,
+ it just makes the TTS file say "you have been here X times" and x goes up each time

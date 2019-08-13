@@ -1,0 +1,12 @@
+https://askubuntu.com/questions/501910/how-to-text-to-speech-output-using-command-line
+
+We are going to use the festival
+sudo apt-get install festival
+
+library , which works for unix.
+
+What you do is make a text file, and then pipe it into festival, which will save it to a set .wav file.
+
+text2wave myfile.txt -o myfile.wav
+
+there might be a way to change voices, but right now default is good.
