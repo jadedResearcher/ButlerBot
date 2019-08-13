@@ -4,8 +4,8 @@ import 'dart:io';
 abstract class WaveWriter {
 
     static void writeLocal(String fileName) async {
-        Process pwd =  await Process.start('text2wave', <String>["$fileName.txt","-o","$fileName.wav"]);
-        await pwd.exitCode;
+        //Process.run waits for it to be over, start lets you wait for its end seperate (and pass inputs) run returns ProcessResult
+        await Process.run('text2wave', <String>["$fileName.txt","-o","$fileName.wav"]);
         return;
     }
 
