@@ -9,8 +9,8 @@ abstract class FFMPEGWrapper {
 
     //mostly used for podcast engine (makes them then moves them) (wav will come from festival text2Wave
     static void convertWavToMP3AndOGG(String fileName, String finalLocation) async {
-        Process pwd =  await Process.start('ffmpeg', <String>["-i","$fileName.wav","-acodec", "libvorbis","${finalLocation}${fileName}.ogg"]);
-        Process pwd2 =  await Process.start('ffmpeg', <String>["-i","$fileName.wav","${finalLocation}${fileName}.mp3"]);
+        Process pwd =  await Process.start('ffmpeg', <String>["-i","-nostdin", "-y", "$fileName.wav","-acodec", "libvorbis","${finalLocation}${fileName}.ogg"]);
+        Process pwd2 =  await Process.start('ffmpeg', <String>["-i","-nostdin", "-y","$fileName.wav","${finalLocation}${fileName}.mp3"]);
         return;
 
     }
