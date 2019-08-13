@@ -35,7 +35,7 @@ Future main() async {
 
 Future<Null> process(HttpRequest request) async{
   print("request url is ${request.uri}");
-  TestHandler.test();
-  request.response.write("No. Not yet.");
+  await TestHandler.test();
+  request.response.write("It did it. It should be ${TestHandler.numVisits}");
 
 }

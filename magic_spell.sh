@@ -1,1 +1,1 @@
-sudo dart bin/server.dart </dev/null &
+sudo dart bin/tts_server.dart </dev/null &
