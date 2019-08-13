@@ -1,0 +1,1 @@
+sudo dart bin/server.dart </dev/null &

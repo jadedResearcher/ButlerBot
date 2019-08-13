@@ -7,7 +7,10 @@ abstract class TestHandler {
 
     static void test() {
         numVisits ++;
-        TextWriter.writeLocal("test.txt","Great Scott! It's working, JR!!! Its worked $numVisits times! ");
+        print("numVisits is $numVisits");
+        TextWriter.writeLocal("test.txt","$numVisits times it has worked. Does it cache?");
+        print("wrote the text file");
         WaveWriter.writeLocal("test");
+        print("did the wave writer");
     }
 }

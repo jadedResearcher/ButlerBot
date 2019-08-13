@@ -10,3 +10,5 @@ What you do is make a text file, and then pipe it into festival, which will save
 text2wave myfile.txt -o myfile.wav
 
 there might be a way to change voices, but right now default is good.
+
+sudo ufw allow 8500

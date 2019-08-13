@@ -13,3 +13,20 @@ Write a server to:
 
 step 1: can i make a serve route thing that when you go to it,
  it just makes the TTS file say "you have been here X times" and x goes up each time
+
+ Done 8/12.
+
+ Gonna sleep/rest, but when I wake up my next step is:
+
+ Step 2: Figure out where to host this permanently (so it can write files to the podcast engine location).
+ use ffmpeg to transcode wav files to ogg and mp3 (i have magic spells, copy how they work but with a set file name)
+ pick final file name (hello_butler_bot). also generate .json files (with transcript in it and gigglesnort)
+
+ Step 3: write the server to take in input and update the wav file based on it.
+
+ step 4 write client (do what bob did, instead of polls, have it query and then just await a response)
+ that prints out last known client text, response text and has a button to listen to the mp3/ogg of the last audio, and if a new one is
+ sent, plays it out.
+ WARNING may need to invalidate caches to make it work proper? (can you make it so only a single file isn't cached?)
+
+ step 5: flesh out server with pl's chat bot (its in git) and make it so it only responds to one question every ten seconds or so.
