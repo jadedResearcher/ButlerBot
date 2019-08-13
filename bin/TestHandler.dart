@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'FFMPEGWrapper.dart';
 import 'TextWriter.dart';
 import 'WaveWriter.dart';
@@ -5,6 +7,17 @@ import 'WaveWriter.dart';
 abstract class TestHandler {
 
     static int numVisits = 0;
+
+    static void testAsyncCalls() async {
+        for(int i = 0; i<4; i++) {
+            print("About to test $i ${new DateTime.now()}");
+            //ProcessResult ret = await Process.run('sleep', <String>["3"]);
+            //print("output is: ${ret.stdout}");
+            await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot",".");
+            print("Done testing $i ${new DateTime.now()}");
+        }
+
+    }
 
     static void test() async {
         numVisits ++;
