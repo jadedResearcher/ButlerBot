@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 
+import 'TestHandler.dart';
 import 'TextWriter.dart';
 
 /*
@@ -34,7 +35,7 @@ Future main() async {
 
 Future<Null> process(HttpRequest request) async{
   print("request url is ${request.uri}");
-  TextWriter.writeLocal("hello_world.txt", "Actually, its happening.");
+  TestHandler.test();
   request.response.write("No. Not yet.");
 
 }
