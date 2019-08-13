@@ -1,0 +1,19 @@
+//handles transcoding
+import 'dart:io';
+/* examples from magic spells:
+  ffmpeg -i $f ${fileName}.m4a
+ffmpeg -i $f -acodec libvorbis ${fileName}.ogg
+  ffmpeg -i $f  ${fileName}.mp3
+ */
+abstract class FFMPEGWrapper {
+
+    //mostly used for podcast engine (makes them then moves them) (wav will come from festival text2Wave
+    static void convertWavToMP3AndOGG(String fileName, String finalLocation) async {
+        //TODO use final location to set the file location, for now just do it local
+        Process pwd =  await Process.start('ffmpeg', <String>["-i","$fileName.wav","-acodec", "libvorbis","${fileName}.ogg"]);
+        Process pwd2 =  await Process.start('ffmpeg', <String>["-i","$fileName.wav","${fileName}.mp3"]);
+        return;
+
+    }
+
+}

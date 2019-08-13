@@ -1,3 +1,4 @@
+import 'FFMPEGWrapper.dart';
 import 'TextWriter.dart';
 import 'WaveWriter.dart';
 
@@ -11,6 +12,8 @@ abstract class TestHandler {
         TextWriter.writeLocal("test.txt","$numVisits times it has worked. Does it cache?");
         print("wrote the text file");
         await WaveWriter.writeLocal("test");
-        print("did the wave writer");
+        print("did the wave writing");
+        await FFMPEGWrapper.convertWavToMP3AndOGG("test","/c/Users/jadedResearcher/");
+        print("did the conversion");
     }
 }
