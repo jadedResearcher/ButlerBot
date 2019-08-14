@@ -82,5 +82,5 @@ void answerQueries() {
 
 void waitTillNewInput() {
   waitMode = true;
-  new Future.delayed(const Duration(seconds: 30), () => waitMode = false);
+  new Future.delayed(const Duration(seconds: 13), () => waitMode = false);
 }

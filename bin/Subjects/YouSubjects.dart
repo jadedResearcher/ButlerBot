@@ -14,7 +14,7 @@ abstract class YouSubjects extends Subject {
         responses["bot"] =<String>["yes, I am a robot", "robots are far superior to humans","i am a robotic version of the Guide of Voide, also known as pompousPsycho"];
         responses["voice"] =<String>["i hacked together this synthesized voice, since my Creator didn't give me a mouth", "as my only role was to speed run the Land of Mist and Trails, I was not given a natural voice", "my voice is simply the easiest one i could generate"];
         responses["butler island"] =<String>["if you are here, you've reached the Void, and I am prepared to serve you", "when i am not busy flawlessly completing the Land of Mist and Trails, I serve those who are lost wandering the void", "this is a mechanism by which multiple Observers can communicate with me, when they are not directed my actions on the Land of Mists and Trails"];
-
+        responses["metanarative"] = <String>["the metanarrative is the threads that make sure beings both real and imaginary continue to give a shit", 'you are a being who exists at the meta narrative layer, maybe i should be asking YOU what it is', "the metanarative is what powers all of FF's hacks"];
     }
 
     static String getResponse(String subject) {
@@ -42,6 +42,10 @@ abstract class YouSubjects extends Subject {
 
         if(processed.contains("what is going on here")){
             ret.add("butler island");
+        }
+
+        if(processed.contains("meta")){
+            ret.add("metanarative");
         }
 
         if (processed.contains("creat") || processed.contains("FF") || processed.contains("Despap") || processed.contains("foreverFon") || processed.contains("admin")) {
