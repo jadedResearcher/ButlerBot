@@ -10,7 +10,7 @@ abstract class SecretSubjects extends Subject {
         responses["triple surprise noodle"] =<String>["isn't that some kind of puzzle?", "i don't think that really matters here."];
         responses["loras"] =<String>["i don't know what that is.", "it sounds like a land."];
         responses["shogun"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
-        responses["jr"] =<String>["junior seems to somehow be involved in the creation of this game", "junior makes weird podcasts"];
+        responses["junior"] =<String>["junior seems to somehow be involved in the creation of this game", "junior makes weird podcasts", "junior is a 'waste of mind', whatever that means"];
     }
 
     static String getResponse(String subject) {
@@ -45,7 +45,7 @@ abstract class SecretSubjects extends Subject {
         }
 
         if (processed.contains("jr") || processed.contains("jadedResearcher") || processed.contains("waste of mind") || processed.contains("junior")) {
-            ret.add("jr");
+            ret.add("junior");
         }
         return ret;
     }
