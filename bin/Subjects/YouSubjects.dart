@@ -13,7 +13,7 @@ abstract class YouSubjects extends Subject {
         responses["butler"] =<String>["in the old world, someone of my organic dopelgangers caste would have been assigned to be a butler.", "a butler is a class who functions to serve their aspect, in every meaning of the word", "it is my pleasure to serve you all", "i am the Butler of Void, pleased to meet you. You may call me ButlerBot, or BB.", "i don't mind being a butler bot, but i wish i was the real Player of LOMAT"];
         responses["bot"] =<String>["yes, I am a robot", "robots are far superior to humans","i am a robotic version of the Guide of Voide, also known as pompousPsycho"];
         responses["voice"] =<String>["i hacked together this synthesized voice, since my Creator didn't give me a mouth", "as my only role was to speed run the Land of Mist and Trails, I was not given a natural voice", "my voice is simply the easiest one i could generate"];
-        responses["butler island"] =<String>["if you are here, you've reached the Void, and I am prepared to server you", "when i am not busy flawlessly completing the Land of Mist and Trails, I serve those who are lost wandering the void", "this is a mechanism by which multiple Observers can communicate with me, when they are not directed my actions on the Land of Mists and Trails"];
+        responses["butler island"] =<String>["if you are here, you've reached the Void, and I am prepared to serve you", "when i am not busy flawlessly completing the Land of Mist and Trails, I serve those who are lost wandering the void", "this is a mechanism by which multiple Observers can communicate with me, when they are not directed my actions on the Land of Mists and Trails"];
 
     }
 
