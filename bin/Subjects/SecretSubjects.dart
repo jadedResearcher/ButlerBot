@@ -23,7 +23,8 @@ abstract class SecretSubjects extends Subject {
         responses["shogun"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
         responses["junior"] =<String>["junior seems to somehow be involved in the creation of this game", "junior makes weird podcasts", "junior is a 'waste of mind', whatever that means"];
         responses["root access"] = <String>["okay. i will give you root. the subjects i know about right now are ${Subject.getSubjectList().join(",")}"];
-    }
+        responses["help"] = <String>["while i live to serve, this is the void and you will have to find the information you want yourself", "how can i help you, Observer? I understand words best if you have clear topics related to the Land of Mist and Trails and Segundia"];
+   }
 
     static String getResponse(String subject) {
         if(responses.isEmpty) initResponses();
@@ -54,6 +55,10 @@ abstract class SecretSubjects extends Subject {
 
         if (processed.contains("pi") || processed.contains("irrational") || processed.contains("number")) {
             ret.add("numbers");
+        }
+
+        if (processed.contains("help") || processed.contains("confused") || processed.contains("root")) {
+            ret.add("help");
         }
 
         if (processed.contains("romance") || processed.contains("love you") || processed.contains("love me")) {
