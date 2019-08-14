@@ -1,4 +1,19 @@
-A web server built using [Shelf](https://pub.dartlang.org/packages/shelf).
+https://askubuntu.com/questions/501910/how-to-text-to-speech-output-using-command-line
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+We are going to use the festival
+sudo apt-get install festival
+
+library , which works for unix.
+
+What you do is make a text file, and then pipe it into festival, which will save it to a set .wav file.
+
+text2wave myfile.txt -o myfile.wav
+
+there might be a way to change voices, but right now default is good.
+
+sudo ufw allow 8500
+
+
+You also want to ps -few | grep tts
+ to turn off the server (there will be two processes)
+  and then you can pub get and then ./magic_spell.sh
