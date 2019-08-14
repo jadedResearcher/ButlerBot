@@ -11,6 +11,4 @@ dependencies:
   args: ^1.4.2
   shelf: ^0.7.2
   CommonLib:
-    git: git://github.com/FarragoFiction/CommonLib.git
-dev_dependencies:
-  pedantic: ^1.0.0
+    path: gitpackages/CommonLib
