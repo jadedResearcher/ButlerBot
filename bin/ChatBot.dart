@@ -53,6 +53,7 @@ abstract class ChatBot {
         choices.add("", 13);
         choices.add("we are now talking about $subject.", 0.5);
         choices.add("the ALL FATHER allows me to speak of $subject", 0.3);
+        choices.add("my SYSADMIN allows me to speak of $subject", 0.3);
         Random rand = new Random();
         return rand.pickFrom(choices);
     }
@@ -64,7 +65,7 @@ abstract class ChatBot {
         int responses = 0;
         int maxResponses = 5;
         String ret = "";
-        if(subjects.isEmpty) ret = (Subject.getConfusedPhrase());
+        if(subjects.isEmpty) ret = (Subject.getConfusedPhrase(input));
         for(String subject in subjects) {
             if(responses > maxResponses) {
                 break;

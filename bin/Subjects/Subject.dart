@@ -39,8 +39,10 @@ abstract class Subject {
         }
     }
 
-    static String getConfusedPhrase() {
-        return "It seems you have asked about PP's automatic victory assuring robotic doppelganger.. This is an installation designed to surpass PP's entirely abysmal motivation, competance, intelligence, personality, and substance of character while he is away drinking ill advised honey based soda products. The algorithms are guaranteed to be ${90+new Random().nextDoubleRange(0,10)}% distinguishable from PP's native neurological responses, based on some statistical analysis I basically just pulled out of my ass right now.";
+    static String getConfusedPhrase(String input) {
+        List<String> words = input.split(" ");
+        List<String> choices = ["I would need to query my SysAdmin for permission to discuss that.","The AllFather has not cleared me to discuss that.","No. I don't talk about that.","I don't understand.", "I am confused.", "I mostly only know about the Land of Mists and Trails.", "Why do you want to know about '${new Random().pickFrom(words)}'"];
+        return new Random().pickFrom(choices);
     }
 
     static List<String> getSubjects(String input) {
