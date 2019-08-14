@@ -30,6 +30,9 @@ Future main() async {
     request.response.headers.add("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT,OPTIONS");
     if(request.uri.toString().contains("TalkButlerBot")) {
       await process(request);
+    }else if(request.uri.toString().contains("JRHAXBUTITSFORAREALLYGOODPURPOSE")) {
+      await ChatBot.echoInput(request.uri.queryParameters['input']);
+      request.response.write("thank you for your input");
     }
     request.response.close();
   }
