@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 
+import 'ChatBot.dart';
 import 'TestHandler.dart';
 import 'TextWriter.dart';
 
@@ -27,7 +28,9 @@ Future main() async {
   await for (HttpRequest request in server) {
     request.response.headers.add("Access-Control-Allow-Origin", "*");
     request.response.headers.add("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT,OPTIONS");
-    await process(request);
+    if(request.uri.toString().contains("TalkButlerBot")) {
+      await process(request);
+    }
     request.response.close();
   }
 }
@@ -35,7 +38,8 @@ Future main() async {
 
 Future<Null> process(HttpRequest request) async{
   print("request url is ${request.uri}");
-  await TestHandler.testAsyncCalls();
-  request.response.write("It did it. It should be ${TestHandler.numVisits}");
+  await TestHandler.test();
+  await ChatBot.handleInput(request.uri.queryParameters['input']);
+  request.response.write("thank you for your input");
 
 }

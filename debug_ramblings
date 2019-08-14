@@ -25,6 +25,7 @@ step 1: can i make a serve route thing that when you go to it,
  done
 
  EMERGENCY 2.5: figure out how to make dart ACTUALLY wait for a process to complete, not just move ahead
+ done
 
  Step 3: write the server to take in input and update the wav file based on it.
 

@@ -15,7 +15,7 @@ abstract class TestHandler {
             //print("output is: ${ret.stdout}");
             await TextWriter.writeLocal("test.txt","${new DateTime.now().hour}:${new DateTime.now().minute} o'clock. Hello World. It's working.");
             await WaveWriter.writeLocal("test");
-            await FFMPEGWrapper.convertWavToMP3AndOGG("test",".");
+            await FFMPEGWrapper.convertWavToMP3AndOGG("test","/var/www/html/knucklessux.com/public_html/");
             print("Done testing $i ${new DateTime.now()}");
         }
 
@@ -24,7 +24,7 @@ abstract class TestHandler {
     static void test() async {
         numVisits ++;
         print("numVisits is $numVisits");
-        String text = "$numVisits times it has worked. Does it cache?";
+        String text = "${new DateTime.now().hour}:${new DateTime.now().minute} o'clock. Hello World. It's working.";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         print("wrote the text file");
         await WaveWriter.writeLocal("hello_butler_bot");
