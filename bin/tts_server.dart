@@ -37,6 +37,8 @@ Future main() async {
     }else if(request.uri.toString().contains("JRHAXBUTITSFORAREALLYGOODPURPOSE")) {
       await ChatBot.echoInput("JR",request.uri.queryParameters['input']);
       request.response.write("thank you for your input");
+    }else if(request.uri.toString().contains("ChatLogHax")) {
+      request.response.write(ChatBot.chatLog);
     }
 
     if(!request.uri.toString().contains("ResponseStatus")) {

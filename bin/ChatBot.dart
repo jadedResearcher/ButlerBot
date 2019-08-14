@@ -19,9 +19,9 @@ abstract class ChatBot {
         String text = await getOutput(input);
         chatLog = "$chatLog \n\n $chatHandle: $input\nButlerBot: $text";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
-        //await WaveWriter.writeLocal("hello_butler_bot");
-        //await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
-        //await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", "Response to ${chatHandle}'s Input: $input", text );
+        await WaveWriter.writeLocal("hello_butler_bot");
+        await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
+        await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", "Response to ${chatHandle}'s Input: $input", text );
         print("chatLog is: $chatLog");
     }
 
@@ -35,22 +35,24 @@ abstract class ChatBot {
 
     static String getJoiningWord() {
         WeightedList<String> choices = new WeightedList<String>();
-        choices.add("Also", 1.0);
+        choices.add("also", 1.0);
         choices.add("", 3.0);
-        choices.add("Furthermore", 0.3);
-        choices.add("Additionally", 1.0);
-        choices.add("Morever", 0.3);
+        choices.add("furthermore", 0.3);
+        choices.add("additionally", 1.0);
+        choices.add("morever", 0.3);
+        choices.add("incidentally", 0.3);
+        choices.add("btw", 0.9);
         Random rand = new Random();
         return rand.pickFrom(choices);
     }
 
     static String getSubjectPhrase(String subject) {
         WeightedList<String> choices = new WeightedList<String>();
-        choices.add("It seems you have asked about $subject. ", 3.0);
-        choices.add("Do you mean $subject? ", 1.0);
+        choices.add("it seems you have asked about $subject. ", 3.0);
+        choices.add("do you mean $subject? ", 1.0);
         choices.add("", 13);
-        choices.add("We are now talking about $subject.", 0.5);
-        choices.add("The ALL FATHER allows me to speak of $subject", 0.3);
+        choices.add("we are now talking about $subject.", 0.5);
+        choices.add("the ALL FATHER allows me to speak of $subject", 0.3);
         Random rand = new Random();
         return rand.pickFrom(choices);
     }
