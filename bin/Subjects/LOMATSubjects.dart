@@ -5,6 +5,11 @@ import 'Subject.dart';
 
 abstract class LOMATSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
+   
+   static List<String> getSubjectList() {
+       if(responses.isEmpty) initResponses();
+       return responses.keys;
+   }
 
     static void initResponses() {
         List<String> gulls = <String>["Ebony", "Skoll", "Nut", "Geb", "The Kid", "Hajala", "Fenrir Junior", "Sans", "Roger Koon"];

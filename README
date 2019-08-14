@@ -17,3 +17,5 @@ sudo ufw allow 8500
 You also want to ps -few | grep tts
  to turn off the server (there will be two processes)
   and then you can pub get and then ./magic_spell.sh
+
+Don't forget to copy ButlerIsland to the root dir of farrangarok, so it does voidy shit.

@@ -6,6 +6,13 @@ import 'Subject.dart';
 abstract class YouSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
 
+
+   static List<String> getSubjectList() {
+       if(responses.isEmpty) initResponses();
+       return responses.keys;
+   }
+
+
     static void initResponses() {
         responses["creator"] =<String>["FF made me to help LOMAT be completed on schedule", "Despap Citato made technology to help all the Players complete their lands on schedule, including me.","FF designed me to use your input to better complete LOMAT."];
         responses["you"] = <String>["You are my metanarrative partner, an Observer who communicates their wishes to me and assists me in navigating the land of mists and trails", "i would love to hear more about you, Observer","you are one of my many trans-timeline meta narrative partners. i don't know how we became partners, but i know it is true", 'you are currently lost, wandering the void, hopefully soon you will return to help me navigate the Land of Mists and Trails', 'I do not think FF knows about you yet. You are my secret.', "I am really glad I have someone to talk to in this Void. The gulls are nice, but they know I'm not the true Player of LOMAT, and that stings."];
@@ -36,7 +43,7 @@ abstract class YouSubjects extends Subject {
             ret.add("me");
         }
 
-        if (processed.contains("who") && (processed.contains("i") || processed.contains("me")) ) {
+        if (processed.contains("who am i") && (processed.contains("i") || processed.contains("who do you think i am")) ) {
             ret.add("you");
         }
 

@@ -6,6 +6,11 @@ import 'Subject.dart';
 abstract class PleasantrySubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
 
+   static List<String> getSubjectList() {
+       if(responses.isEmpty) initResponses();
+       return responses.keys;
+   }
+
     static void initResponses() {
         responses["greeting"] =<String>["hello", "greetings", "salutations"];
         responses["farewell"] =<String>["thank you for talking with me", "goodbye", "dont be a stranger", "it was nice talking with you"];

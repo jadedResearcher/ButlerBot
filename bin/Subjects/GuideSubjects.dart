@@ -6,6 +6,11 @@ import 'Subject.dart';
 abstract class GuideSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
 
+   static List<String> getSubjectList() {
+       if(responses.isEmpty) initResponses();
+       return responses.keys;
+   }
+
     static void initResponses() {
         responses["player"] =<String>["while i do indeed 'play' LOMAT, i am not its player, no.", "I care deeply about each and every consort on LOMAT, but alas, as I am not their Player they have no bond to me", "Fenrir is needlessly cruel in pointing out that I am not his assigned Player"];
         responses["guide"] =<String>["While a Guide leads, a Butler serves.", "A Guide of Void is meant to lead others towards their aspect.", "I might be a Guide at heart, but I have Chosen to be a Butler. How may I serve you?", "Once I found a podcast by a different sort of GuideBot. They were so angry at eggs."];

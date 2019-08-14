@@ -57,4 +57,16 @@ abstract class Subject {
         return ret;
     }
 
+    static List<String> getSubjectList() {
+        List<String> ret = new List<String>();
+        ret.addAll(PleasantrySubjects.getSubjectList());
+        ret.addAll(LamiaSubjects.getSubjectList());
+        ret.addAll(LOMATSubjects.getSubjectList());
+        ret.addAll(GuideSubjects.getSubjectList());
+        ret.addAll(YouSubjects.getSubjectList());
+        ret.addAll(SecretSubjects.getSubjectList());
+
+        return ret;
+    }
+
 }

@@ -6,6 +6,11 @@ import 'Subject.dart';
 abstract class LamiaSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
 
+   static List<String> getSubjectList() {
+       if(responses.isEmpty) initResponses();
+       return responses.keys;
+   }
+
     static void initResponses() {
         responses["snake"] =<String>["Lamia society is divided into the proper tailed lamia, and the unfortunate leg lamia.", "In order to do full tree breeding, lamia require proper tails, which can split into roots.","Leg Lamia are more expendable than tail lamia, since their breeding methods are as slow as whatever their host species is.", "Since tail lamia breed faster, the Father values them more."];
         responses["fruit"] =<String>["All Lamia are born either from fruit, or from a host species.", "Growing fruit is the highest calling of any Lamia, and my organic dopelganger despises that caste."];

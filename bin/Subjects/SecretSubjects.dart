@@ -6,6 +6,11 @@ import 'Subject.dart';
 abstract class SecretSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
 
+   static List<String> getSubjectList() {
+       if(responses.isEmpty) initResponses();
+       return responses.keys;
+   }
+
     static void initResponses() {
         //up dog, ligma, etc etchidna
         responses["manicInsomniac"] = <String>["I heard from my SysAdmin that there is an alien on the sacred land of horticulture and essence"];
@@ -17,6 +22,7 @@ abstract class SecretSubjects extends Subject {
         responses["e"] =<String>["yyyyyyyyyyyyyy","iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii","uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "ooooooooooooooooooooooooooooooo"];
         responses["shogun"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
         responses["junior"] =<String>["junior seems to somehow be involved in the creation of this game", "junior makes weird podcasts", "junior is a 'waste of mind', whatever that means"];
+        responses["root access"] = <String>["okay. i will give you root. the subjects i know about right now are ${Subject.getSubjectList().join(",")}"];
     }
 
     static String getResponse(String subject) {
@@ -64,6 +70,10 @@ abstract class SecretSubjects extends Subject {
 
         if (processed.contains("jrs tall")) {
             ret.add("jrs height");
+        }
+
+        if (processed.contains("give me root bitch")) {
+            ret.add("root access");
         }
 
         if (processed == ("e") || processed == ("f")) {
