@@ -38,7 +38,6 @@ Future main() async {
 
 Future<Null> process(HttpRequest request) async{
   print("request url is ${request.uri}");
-  await TestHandler.test();
   await ChatBot.handleInput(request.uri.queryParameters['input']);
   request.response.write("thank you for your input");
 
