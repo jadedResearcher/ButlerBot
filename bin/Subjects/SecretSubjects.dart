@@ -7,7 +7,7 @@ abstract class SecretSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
 
     static void initResponses() {
-        //up dog, ligma, etc
+        //up dog, ligma, etc etchidna
         responses["triple surprise noodle"] =<String>["isn't that some kind of puzzle?", "i don't think that really matters here."];
         responses["loras"] =<String>["i don't know what that is.", "it sounds like a land."];
         responses["e"] =<String>["yyyyyyyyyyyyyy","iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii","uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "ooooooooooooooooooooooooooooooo"];

@@ -6,6 +6,8 @@ import 'WaveWriter.dart';
 import 'package:CommonLib/Random.dart';
 import 'package:CommonLib/Collection.dart';
 
+//todo consider having vague memory so its twitch plays conversation trees
+
 abstract class ChatBot {
 
     static List<String> subjects;
@@ -14,9 +16,9 @@ abstract class ChatBot {
     static void handleInput(String input) async {
         String text = await getOutput(input);
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
-        await WaveWriter.writeLocal("hello_butler_bot");
-        await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
-        await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", "Response to Input: $input", text );
+        //await WaveWriter.writeLocal("hello_butler_bot");
+        //await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
+        //await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", "Response to Input: $input", text );
     }
 
     static void echoInput(String input) async {

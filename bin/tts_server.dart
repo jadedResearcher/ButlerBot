@@ -16,6 +16,8 @@ make a dart project for k whatever. shows everything in a table
 
  */
 
+bool waitMode = false;
+
 Future main() async {
 
   var server = await HttpServer.bind(
@@ -29,7 +31,7 @@ Future main() async {
     request.response.headers.add("Access-Control-Allow-Origin", "*");
     request.response.headers.add("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT,OPTIONS");
     if(request.uri.toString().contains("TalkButlerBot")) {
-      await process(request);
+      await processInput(request);
     }else if(request.uri.toString().contains("JRHAXBUTITSFORAREALLYGOODPURPOSE")) {
       await ChatBot.echoInput(request.uri.queryParameters['input']);
       request.response.write("thank you for your input");
@@ -39,9 +41,19 @@ Future main() async {
 }
 
 
-Future<Null> process(HttpRequest request) async{
+Future<Null> processInput(HttpRequest request) async{
+  if(waitMode) {
+    request.response.write("apologies, but please wait your turn");
+    return;
+  }
+  waitTillNewInput();
   print("request url is ${request.uri}");
   await ChatBot.handleInput(request.uri.queryParameters['input']);
   request.response.write("thank you for your input");
 
+}
+
+void waitTillNewInput() {
+  waitMode = true;
+  new Future.delayed(const Duration(seconds: 3), () => waitMode = false);
 }
