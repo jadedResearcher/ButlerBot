@@ -3,14 +3,16 @@ import 'package:CommonLib/Random.dart';
 
 import 'Subject.dart';
 
-abstract class SecretSubjects extends Subject {
+abstract class LamiaSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
 
     static void initResponses() {
-        responses["triple surprise noodle"] =<String>["isn't that some kind of puzzle?", "i don't think that really matters here."];
-        responses["loras"] =<String>["i don't know what that is.", "it sounds like a land."];
-        responses["shogun"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
-        responses["junior"] =<String>["junior seems to somehow be involved in the creation of this game", "junior makes weird podcasts", "junior is a 'waste of mind', whatever that means"];
+        responses["snake"] =<String>["Lamia society is divided into the proper tailed lamia, and the unfortunate leg lamia.", "In order to do full tree breeding, lamia require proper tails, which can split into roots.","Leg Lamia are more expendable than tail lamia, since their breeding methods are as slow as whatever their host species is.", "Since tail lamia breed faster, the Father values them more."];
+        responses["fruit"] =<String>["All Lamia are born either from fruit, or from a host species.", "Growing fruit is the highest calling of any Lamia, and my organic dopelganger despises that caste."];
+        responses["caste"] =<String>["While lamia blood color does matter, as I explained to that Bard for her CaseStudy, tail status matters far more.", "As a robot, my caste is Leg-Blue."];
+        responses["corruption"] =<String>["The unending will to live is the call of the Father/Mother.", "Nidhogg's will is that we spread and thrive.", "Life is Power. Power corrupts. But would you really prefer death?"];
+        responses["purification"] =<String>["As a meta-narrative bot, I am aware of multiple timelines and am deeply concerned about purification.", "So called purification appears to make lamia obsessed with death, to the point of trying to kill a Universe.", "Nidhogg isn't meant to be purified. Don't destroy life."];
+
     }
 
     static String getResponse(String subject) {
@@ -24,29 +26,26 @@ abstract class SecretSubjects extends Subject {
     }
 
 
+    //snake, fruit, corruption, purification, caste
     static List<String> getSubjects(String input) {
         String processed = Subject.getProcessed(input);
         List<String> ret = new List<String>();
+        if (processed.contains("snake") || processed.contains("lamia") || processed.contains("leg")) {
+            ret.add("snake");
+        }
+        if (processed.contains("fruit") || processed.contains("tree") || processed.contains("nidhogg") || processed.contains("father")) {
+            ret.add("fruit");
+        }
+        if (processed.contains("corrupt")) {
+            ret.add("corruption");
+        }
+        if (processed.contains("purification") || processed.contains("pure")) {
+            ret.add("purification");
+        }
+        if (processed.contains("caste") || processed.contains("blood") || processed.contains("color")) {
+            ret.add("caste");
+        }
 
-        if (processed.contains("better than expected") ||
-            processed.contains("[???]") || processed.contains("???")) {
-            ret.add( "triple surprise noodle");
-        }
-        if (processed.contains("better than expected") || processed.contains("[???]") || processed.contains("???")) {
-            ret.add("triple surprise noodle");
-        }
-
-        if (processed.contains("loras") || processed.contains("janus") || processed.contains("rods")) {
-            ret.add("loras");
-        }
-
-        if (processed.contains("who is shogun")) {
-            ret.add("shogun");
-        }
-
-        if (processed.contains("jr") || processed.contains("jadedResearcher") || processed.contains("waste of mind") || processed.contains("junior")) {
-            ret.add("junior");
-        }
         return ret;
     }
 }

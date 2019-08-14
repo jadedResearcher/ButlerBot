@@ -3,19 +3,21 @@ import 'package:CommonLib/Random.dart';
 
 import 'Subject.dart';
 
-abstract class SecretSubjects extends Subject {
+abstract class LOMATSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
 
     static void initResponses() {
-        responses["gull"] =<String>["isn't that some kind of puzzle?", "i don't think that really matters here."];
-        responses["fenrir"] =<String>["i don't know what that is.", "it sounds like a land."];
-        responses["grave"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
-        responses["wagon"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
-        responses["yn"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
-        responses["loki"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
-        responses["lil scumbag"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
-        responses["grim reaper"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
-        responses["city"] =<String>["junior seems to somehow be involved in the creation of this game", "junior makes weird podcasts", "junior is a 'waste of mind', whatever that means"];
+        List<String> gulls = <String>["Ebony", "Skoll", "Nut", "Geb", "The Kid", "Hajala", "Fenrir Junior", "Sans", "Roger Koon"];
+        String favGull = new Random().pickFrom(gulls);
+        responses["gull"] =<String>["i love each and every one of those sqwawking birds.", "my favorite gull is $favGull", "It really is a shame what fenrir did to them.", "I hope the gulls can find peace. Even if I'd be lonely after."];
+        responses["fenrir"] =<String>["i wish he'd stop rubbing my non player status in.", "fenrir really upset all those gulls", "fenrir is so entitled. what an asshole."];
+        responses["grave"] =<String>["rest in peace.", "some graves have hidden messages on them"];
+        responses["wagon"] =<String>["After PP crashed his boat, I converted it into a more suitable form.", "there is something satisfying about transporting small parties over long distances in a wagon", "PP would be so pissed if he realized what I did to his boat"];
+        responses["yn"] =<String>["I don't think he knows what is going on.", "It sounds like he knows exactly what is going on.", "i don't think he's a lamia."];
+        responses["loki"] =<String>["I don't know who loki is.", "I only know the name 'loki', nothing more."];
+        responses["lil scumbag"] =<String>["i don't know what kind of consort the trash gobling is, but they are cute", "even though i don't need trash, every time i see lil scumbag i am happy"];
+        responses["grim reaper"] =<String>["Once, the grim reaper told me that he was happy to have help. I don't know how I helped him.", "One of the gulls really likes the grim reaper."];
+        responses["city"] =<String>["You get used to not being able to leave towns normally.", "The way city names works makes a lot of sense to me.", "Have you ever been to hot pinkgard?"];
     }
 
     static String getResponse(String subject) {
@@ -53,10 +55,6 @@ abstract class SecretSubjects extends Subject {
 
         if (processed.contains("wagon") || processed.contains("boat")) {
             ret.add("wagon");
-        }
-
-        if (processed.contains("who is shogun")) {
-            ret.add("shogun");
         }
 
         if (processed.contains("city") || processed.contains("town") || processed.contains("burg")) {

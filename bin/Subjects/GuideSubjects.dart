@@ -3,7 +3,7 @@ import 'package:CommonLib/Random.dart';
 
 import 'Subject.dart';
 
-abstract class SecretSubjects extends Subject {
+abstract class GuideSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
 
     static void initResponses() {

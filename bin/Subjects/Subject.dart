@@ -1,6 +1,11 @@
 import 'package:CommonLib/Random.dart';
 
+import 'GuideSubjects.dart';
+import 'LOMATSubjects.dart';
+import 'LamiaSubjects.dart';
+import 'PleasantrySubjects.dart';
 import 'SecretSubjects.dart';
+import 'YouSubjects.dart';
 
 abstract class Subject {
     static RegExp punctuationpattern = new RegExp("[.,\/#!%\^&\*;:{}=\-_`~\(\)]");
@@ -11,7 +16,22 @@ abstract class Subject {
     }
 
     static String getResponse(String subject) {
-        String response = SecretSubjects.getResponse(subject);
+        String response = PleasantrySubjects.getResponse(subject);
+        if(response != null) return response;
+
+        response = LamiaSubjects.getResponse(subject);
+        if(response != null) return response;
+
+        response = LOMATSubjects.getResponse(subject);
+        if(response != null) return response;
+
+        response = GuideSubjects.getResponse(subject);
+        if(response != null) return response;
+
+        response = YouSubjects.getResponse(subject);
+        if(response != null) return response;
+
+        response = SecretSubjects.getResponse(subject);
         if(response != null) return response;
 
         if(response == null) { //this shouldn't happen but handle it anyways
@@ -25,7 +45,13 @@ abstract class Subject {
 
     static List<String> getSubjects(String input) {
         List<String> ret = new List<String>();
+        ret.addAll(PleasantrySubjects.getSubjects(input));
+        ret.addAll(LamiaSubjects.getSubjects(input));
+        ret.addAll(LOMATSubjects.getSubjects(input));
+        ret.addAll(GuideSubjects.getSubjects(input));
+        ret.addAll(YouSubjects.getSubjects(input));
         ret.addAll(SecretSubjects.getSubjects(input));
+
         return ret;
     }
 
