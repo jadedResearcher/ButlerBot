@@ -5,10 +5,10 @@ import 'Subject.dart';
 
 abstract class LOMATSubjects extends Subject {
    static Map<String, List<String>> responses = new Map<String, List<String>>();
-   
+
    static List<String> getSubjectList() {
        if(responses.isEmpty) initResponses();
-       return responses.keys;
+       return responses.keys.toList();
    }
 
     static void initResponses() {

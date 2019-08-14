@@ -8,7 +8,7 @@ abstract class SecretSubjects extends Subject {
 
    static List<String> getSubjectList() {
        if(responses.isEmpty) initResponses();
-       return responses.keys;
+       return responses.keys.toList();
    }
 
     static void initResponses() {
