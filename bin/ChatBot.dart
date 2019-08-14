@@ -32,6 +32,8 @@ abstract class ChatBot {
         choices.add("Furthermore", 0.3);
         choices.add("Additionally", 1.0);
         choices.add("Morever", 0.3);
+        Random rand = new Random();
+        return rand.pickFrom(choices);
     }
 
     static String getSubjectPhrase(String subject) {
@@ -41,23 +43,25 @@ abstract class ChatBot {
         choices.add("", 13);
         choices.add("We are now talking about $subject.", 0.5);
         choices.add("The ALL FATHER allows me to speak of $subject", 0.3);
+        Random rand = new Random();
+        return rand.pickFrom(choices);
     }
 
     static Future<String> getOutput(String input) async {
-        //TODO first establish the subject(s). then, get responses for that subject.
-        //TODO only say up to 5 responses at a time , no matter how many subjects
+        //first establish the subject(s). then, get responses for that subject.
+        //only say up to 5 responses at a time , no matter how many subjects
         List<String> subjects = Subject.getSubjects(input);
         int responses = 0;
         int maxResponses = 5;
         String ret = "";
+        if(subjects.isEmpty) ret = (Subject.getConfusedPhrase());
         for(String subject in subjects) {
             if(responses > maxResponses) {
                 break;
             }
-            //TODO add a joining word here
             responses ++;
             if(responses > 1) {
-                ret = "$ret ${getJoiningWord()}, ${getSubjectPhrase()} ${Subject
+                ret = "$ret ${getJoiningWord()}, ${getSubjectPhrase(subject)} ${Subject
                     .getResponse(subject)}";
             }else {
                 ret = "${getSubjectPhrase(subject)} ${Subject
