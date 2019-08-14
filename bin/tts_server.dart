@@ -62,6 +62,10 @@ Future<Null> processInput(HttpRequest request) async{
   if(chatHandle == null || chatHandle.isEmpty) chatHandle = "Anon";
   chatHandle = chatHandle.substring(0,min(113, chatHandle.length));
   String input = request.uri.queryParameters['input'];
+  if(input == null) {
+    request.response.write("apologies, but please give me valid input");
+    return;
+  }
   input = input.substring(0,min(500, input.length));
   await ChatBot.handleInput(chatHandle,input);
   request.response.write("thank you for your input");

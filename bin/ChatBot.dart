@@ -30,7 +30,7 @@ abstract class ChatBot {
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         await WaveWriter.writeLocal("hello_butler_bot");
         await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
-        await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking??? Subjects detected are: ${subjects.join(",")}","ButlerBot", "Response to Input: $input", text );
+        await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking??? How would you get it to change what it says? Is it the farragnarok void, maybe? Subjects detected are: ${subjects.join(",")}","ButlerBot", "Response to Input: $input", text );
     }
 
     static String getJoiningWord() {

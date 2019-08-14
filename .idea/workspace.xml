@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65da64d1-52e0-4b4c-9df4-bb299c3da222" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/ChatBot.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ChatBot.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Subjects/Subject.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/Subject.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Subjects/YouSubjects.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/YouSubjects.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/tts_server.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/tts_server.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello_butler_bot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hello_butler_bot.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/tts_server.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+            <state relative-caret-position="187">
+              <caret line="65" column="64" lean-forward="true" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -80,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/Subjects/YouSubjects.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            <state relative-caret-position="164">
+              <caret line="34" column="128" selection-start-line="34" selection-start-column="128" selection-end-line="34" selection-end-column="128" />
             </state>
           </provider>
         </entry>
@@ -92,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/Subjects/Subject.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-32">
-              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+            <state relative-caret-position="135">
+              <caret line="42" column="387" selection-start-line="42" selection-start-column="387" selection-end-line="42" selection-end-column="387" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -101,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            <state relative-caret-position="433">
+              <caret line="32" column="279" selection-start-line="32" selection-start-column="279" selection-end-line="32" selection-end-column="279" />
               <folding>
                 <element signature="e#104#132#0" expanded="true" />
               </folding>
@@ -121,6 +123,12 @@
         <option value="Dart File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ass</find>
+      <find>ass r</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -145,12 +153,12 @@
         <option value="$PROJECT_DIR$/bin/Subjects/GuideSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/LamiaSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/LOMATSubjects.dart" />
-        <option value="$PROJECT_DIR$/bin/Subjects/Subject.dart" />
-        <option value="$PROJECT_DIR$/bin/Subjects/YouSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/StatusQuery.dart" />
-        <option value="$PROJECT_DIR$/bin/tts_server.dart" />
         <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
+        <option value="$PROJECT_DIR$/bin/Subjects/Subject.dart" />
+        <option value="$PROJECT_DIR$/bin/tts_server.dart" />
+        <option value="$PROJECT_DIR$/bin/Subjects/YouSubjects.dart" />
       </list>
     </option>
   </component>
@@ -193,7 +201,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MagicalGirlSim" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WigglerSim" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
@@ -431,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Subjects/YouSubjects.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -458,16 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/tts_server.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/Subjects/PleasantrySubjects.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -475,23 +466,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="32" column="279" selection-start-line="32" selection-start-column="279" selection-end-line="32" selection-end-column="279" />
+          <folding>
+            <element signature="e#104#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/Subjects/Subject.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        <state relative-caret-position="135">
+          <caret line="42" column="387" selection-start-line="42" selection-start-column="387" selection-end-line="42" selection-end-column="387" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
+    <entry file="file://$PROJECT_DIR$/bin/tts_server.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        <state relative-caret-position="187">
+          <caret line="65" column="64" lean-forward="true" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
           <folding>
-            <element signature="e#104#132#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Subjects/YouSubjects.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="34" column="128" selection-start-line="34" selection-start-column="128" selection-end-line="34" selection-end-column="128" />
         </state>
       </provider>
     </entry>
