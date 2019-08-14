@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
-
+import 'dart:math';
 import 'ChatBot.dart';
 import 'TestHandler.dart';
 import 'TextWriter.dart';
@@ -33,7 +33,7 @@ Future main() async {
     if(request.uri.toString().contains("TalkButlerBot")) {
       await processInput(request);
     }else if(request.uri.toString().contains("JRHAXBUTITSFORAREALLYGOODPURPOSE")) {
-      await ChatBot.echoInput(request.uri.queryParameters['input']);
+      await ChatBot.echoInput("JR",request.uri.queryParameters['input']);
       request.response.write("thank you for your input");
     }
     request.response.close();
@@ -48,12 +48,16 @@ Future<Null> processInput(HttpRequest request) async{
   }
   waitTillNewInput();
   print("request url is ${request.uri}");
-  await ChatBot.handleInput(request.uri.queryParameters['input']);
+  String chatHandle = request.uri.queryParameters['chatHandle'];
+  if(chatHandle == null || chatHandle.isEmpty) chatHandle = "Anon";
+  chatHandle = chatHandle.substring(0,min(113, chatHandle.length));
+  String input = request.uri.queryParameters['input'];
+  input = input.substring(0,min(500, input.length));
+  await ChatBot.handleInput(chatHandle,input);
   request.response.write("thank you for your input");
-
 }
 
 void waitTillNewInput() {
   waitMode = true;
-  new Future.delayed(const Duration(seconds: 3), () => waitMode = false);
+  new Future.delayed(const Duration(seconds: 30), () => waitMode = false);
 }

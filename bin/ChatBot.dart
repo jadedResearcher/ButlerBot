@@ -10,19 +10,23 @@ import 'package:CommonLib/Collection.dart';
 
 abstract class ChatBot {
 
+    static String chatLog = "";
+
     static List<String> subjects;
 
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
-    static void handleInput(String input) async {
+    static void handleInput(String chatHandle, String input) async {
         String text = await getOutput(input);
+        chatLog = "$chatLog \n\n $chatHandle: $input\nButlerBot: $text";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //await WaveWriter.writeLocal("hello_butler_bot");
         //await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
-        //await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", "Response to Input: $input", text );
+        //await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", "Response to ${chatHandle}'s Input: $input", text );
+        print("chatLog is: $chatLog");
     }
 
-    static void echoInput(String input) async {
-        String text = input;
+    static void echoInput(String chatHandle, String input) async {
+        String text = "$chatHandle said: $input";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         await WaveWriter.writeLocal("hello_butler_bot");
         await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
