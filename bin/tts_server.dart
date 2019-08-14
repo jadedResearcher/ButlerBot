@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:async';
 import 'dart:math';
 import 'ChatBot.dart';
+import 'StatusQuery.dart';
 import 'TestHandler.dart';
 import 'TextWriter.dart';
 
@@ -17,6 +18,7 @@ make a dart project for k whatever. shows everything in a table
  */
 
 bool waitMode = false;
+List<StatusQuery> statusQueries = new List<StatusQuery>();
 
 Future main() async {
 
@@ -36,7 +38,13 @@ Future main() async {
       await ChatBot.echoInput("JR",request.uri.queryParameters['input']);
       request.response.write("thank you for your input");
     }
-    request.response.close();
+
+    if(!request.uri.toString().contains("ResponseStatus")) {
+      request.response.close();
+    }else {
+      //don't close yet.
+      statusQueries.add(new StatusQuery(request));
+    }
   }
 }
 
@@ -55,6 +63,15 @@ Future<Null> processInput(HttpRequest request) async{
   input = input.substring(0,min(500, input.length));
   await ChatBot.handleInput(chatHandle,input);
   request.response.write("thank you for your input");
+  answerQueries();
+}
+
+//lets there be an async push notification about when theres new input
+void answerQueries() {
+  for(StatusQuery q in statusQueries) {
+    q.close();
+  }
+  statusQueries.clear();
 }
 
 void waitTillNewInput() {
