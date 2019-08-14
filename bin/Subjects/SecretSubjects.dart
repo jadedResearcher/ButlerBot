@@ -8,8 +8,12 @@ abstract class SecretSubjects extends Subject {
 
     static void initResponses() {
         //up dog, ligma, etc etchidna
+        responses["manicInsomniac"] = <String>["I heard from my SysAdmin that there is an alien on the sacred land of horticulture and essence"];
         responses["triple surprise noodle"] =<String>["isn't that some kind of puzzle?", "i don't think that really matters here."];
-        responses["loras"] =<String>["i don't know what that is.", "it sounds like a land."];
+        responses["loras"] =<String>["i don't know what loras is.", "loras sounds like a land."];
+        responses["jrs height"] =<String>["i don't know how tall jr is.", "i have never met jr, so i dont' know how tall they are."];
+        responses["numbers"] =<String>["I like numbers, I like pi. pi is aproximately ${22/7}", "my favorite number this millisecond is ${new Random().nextInt()}"];
+        responses["romance"] =<String>["iiiii. i don't know what to say. i do not like you that way, Observer.", "while the stereotype of robots being 'emotionless tin cans' is a hurtful one, i am sorry to say i do not feel the same way about you, Observer"];
         responses["e"] =<String>["yyyyyyyyyyyyyy","iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii","uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "ooooooooooooooooooooooooooooooo"];
         responses["shogun"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
         responses["junior"] =<String>["junior seems to somehow be involved in the creation of this game", "junior makes weird podcasts", "junior is a 'waste of mind', whatever that means"];
@@ -42,8 +46,24 @@ abstract class SecretSubjects extends Subject {
             ret.add("loras");
         }
 
+        if (processed.contains("pi") || processed.contains("irrational") || processed.contains("number")) {
+            ret.add("numbers");
+        }
+
+        if (processed.contains("romance") || processed.contains("love you") || processed.contains("love me")) {
+            ret.add("romance");
+        }
+
+        if (processed.contains("bard") || processed.contains("manic") || processed.contains("MI")) {
+            ret.add("manicInsomniac");
+        }
+
         if (processed.contains("who is shogun")) {
             ret.add("shogun");
+        }
+
+        if (processed.contains("jrs tall")) {
+            ret.add("jrs height");
         }
 
         if (processed == ("e") || processed == ("f")) {

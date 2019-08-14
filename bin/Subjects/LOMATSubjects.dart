@@ -15,6 +15,7 @@ abstract class LOMATSubjects extends Subject {
         responses["wagon"] =<String>["After PP crashed his boat, I converted it into a more suitable form.", "there is something satisfying about transporting small parties over long distances in a wagon", "PP would be so pissed if he realized what I did to his boat"];
         responses["yn"] =<String>["I don't think he knows what is going on.", "It sounds like he knows exactly what is going on.", "i don't think he's a lamia."];
         responses["loki"] =<String>["I don't know who loki is.", "I only know the name 'loki', nothing more."];
+        responses["sandwich"] =<String>["I don't know why the land of mist and trials is covered in half eaten sandwiches. I only know I don't like it.", "As a superior robot, I do not eat."];
         responses["lil scumbag"] =<String>["i don't know what kind of consort the trash gobling is, but they are cute", "even though i don't need trash, every time i see lil scumbag i am happy"];
         responses["grim reaper"] =<String>["Once, the grim reaper told me that he was happy to have help. I don't know how I helped him.", "One of the gulls really likes the grim reaper."];
         responses["city"] =<String>["You get used to not being able to leave towns normally.", "The way city names works makes a lot of sense to me.", "Have you ever been to hot pinkgard?"];
