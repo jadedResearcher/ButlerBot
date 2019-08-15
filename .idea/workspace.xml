@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65da64d1-52e0-4b4c-9df4-bb299c3da222" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ChatBot.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ChatBot.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="1073">
               <caret line="73" column="36" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -103,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+            <state relative-caret-position="164">
+              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
               <folding>
                 <element signature="e#104#132#0" expanded="true" />
               </folding>
@@ -130,6 +130,7 @@
       <find>ass r</find>
       <find>hacks</find>
       <find>wait</find>
+      <find>meme</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,9 +160,9 @@
         <option value="$PROJECT_DIR$/bin/Subjects/YouSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/LamiaSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/tts_server.dart" />
-        <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/LOMATSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" />
+        <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
       </list>
     </option>
   </component>
@@ -466,16 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-          <folding>
-            <element signature="e#104#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/Subjects/Subject.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -505,10 +496,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="1073">
           <caret line="73" column="36" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="e#104#132#0" expanded="true" />
           </folding>
         </state>
       </provider>

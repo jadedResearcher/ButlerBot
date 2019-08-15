@@ -64,7 +64,7 @@ abstract class ChatBot {
         //only say up to 5 responses at a time , no matter how many subjects
         subjects = Subject.getSubjects(input);
         int responses = 0;
-        int maxResponses = 5;
+        int maxResponses = 3;
         String ret = "";
         if(subjects.isEmpty) ret = (Subject.getConfusedPhrase(input));
         for(String subject in subjects) {
