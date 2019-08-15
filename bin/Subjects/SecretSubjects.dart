@@ -22,8 +22,15 @@ abstract class SecretSubjects extends Subject {
         responses["e"] =<String>["yyyyyyyyyyyyyy","iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii","uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "ooooooooooooooooooooooooooooooo"];
         responses["shogun"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
         responses["junior"] =<String>["junior seems to somehow be involved in the creation of this game", "junior makes weird podcasts", "junior is a 'waste of mind', whatever that means"];
+        responses["nebulousHarmony"] = <String>["They seem to like talking about aspects?"];
+        responses["paradoxLands"] = <String>["sometimes I see a mysterious witch in the void with me."];
+        responses["karmicRetribution"] = <String>["i heard a podcast about how someone named 'KR' decided how lamia look. i don't understand this"];
+        responses["tableGuardian"] = <String>["he seems to understand a lot about a monster called smokey the bear"];
+        responses["aspiringWatcher"] = <String>["not even my flawless mechanical brain can process some of the riddles i've heard from him"];
+        responses["insufferableOracle"] = <String>["i don't know much about them, but the society before Segundia seemed to venerate them as the source of something called 'Purple Aradia"];
         responses["root access"] = <String>["okay. i will give you root. the subjects i know about right now are ${Subject.getSubjectList().join(",")}"];
         responses["help"] = <String>["while i live to serve, this is the void and you will have to find the information you want yourself", "how can i help you, Observer? I understand words best if you have clear topics related to the Land of Mist and Trails and Segundia"];
+        responses["memes"] = <String>["I am going to sleep now. ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ","Badger badger badger badger mushroom! mushroom! snake! oh a snake!","Who loves Arby's??? I love Arby's!!!","LUNCH TIMEMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"];
    }
 
     static String getResponse(String subject) {
@@ -61,12 +68,40 @@ abstract class SecretSubjects extends Subject {
             ret.add("help");
         }
 
+        if (processed.contains("bee movie") || processed.contains("meme") || processed.contains("bee") || processed.contains("shitpost")) {
+            ret.add("memes");
+        }
+
         if (processed.contains("romance") || processed.contains("love you") || processed.contains("love me")) {
             ret.add("romance");
         }
 
         if (processed.contains("bard") || processed.contains("manic") || processed.contains("MI")) {
             ret.add("manicInsomniac");
+        }
+
+        if (processed.contains("neb") || processed.contains("nebulousHarmony") || processed.contains("NH")) {
+            ret.add("nebulousHarmony");
+        }
+
+        if (processed.contains("paradoxLands") || processed.contains("PL") || processed.contains("witch")) {
+            ret.add("paradoxLands");
+        }
+
+        if (processed.contains("karmicRetribution") || processed.contains("smith") || processed.contains("KR")) {
+            ret.add("karmicRetribution");
+        }
+
+        if (processed.contains("tableGuardian") || processed.contains("TG")) {
+            ret.add("tableGuardian");
+        }
+
+        if (processed.contains("aspiringWatcher") || processed.contains("AW")) {
+            ret.add("aspiringWatcher");
+        }
+
+        if (processed.contains("insufferableOracle") || processed.contains("IO")) {
+            ret.add("insufferableOracle");
         }
 
         if (processed.contains("who is shogun")) {
