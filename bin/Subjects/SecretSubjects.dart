@@ -30,8 +30,11 @@ abstract class SecretSubjects extends Subject {
         responses["insufferableOracle"] = <String>["i don't know much about them, but the society before Segundia seemed to venerate them as the source of something called 'Purple Aradia"];
         responses["root access"] = <String>["okay. i will give you root. the subjects i know about right now are ${Subject.getSubjectList().join(",")}"];
         responses["help"] = <String>["while i live to serve, this is the void and you will have to find the information you want yourself", "how can i help you, Observer? I understand words best if you have clear topics related to the Land of Mist and Trails and Segundia"];
-        responses["memes"] = <String>["I am going to sleep now. ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ","Badger badger badger badger mushroom! mushroom! snake! oh a snake!","Who loves Arby's??? I love Arby's!!!","LUNCH TIMEMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"];
-   }
+        responses["memes"] = <String>["your mom","despacito","hey now you're an all star get your game on get paid","one thing i dont know why it doesnt even matter how hard you try keep that in mind i designed this rhyme i will explain in due time","I am going to sleep now. ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ","Badger badger badger badger mushroom! mushroom! snake! oh a snake!","Who loves Arby's??? I love Arby's!!!","LUNCH TIMEMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"];
+        responses["make me a sandwich"] = <String>["No. You can't make me."];
+        responses["sudo make me a sandwich"] = <String>["No. You don't have root access."];
+
+    }
 
     static String getResponse(String subject) {
         if(responses.isEmpty) initResponses();
@@ -68,7 +71,7 @@ abstract class SecretSubjects extends Subject {
             ret.add("help");
         }
 
-        if (processed.contains("bee movie") || processed.contains("meme") || processed.contains("bee") || processed.contains("shitpost")) {
+        if (processed.contains("joke") || processed.contains("bee movie") || processed.contains("meme") || processed.contains("bee") || processed.contains("shitpost")) {
             ret.add("memes");
         }
 
@@ -102,6 +105,14 @@ abstract class SecretSubjects extends Subject {
 
         if (processed.contains("insufferableOracle") || processed.contains("IO")) {
             ret.add("insufferableOracle");
+        }
+
+        if(processed.contains("sudo make me a sandwich")){
+            ret.add("sudo make me a sandwich");
+        }
+
+        if(processed.contains("make me a sandwich")){
+            ret.add("make me a sandwich");
         }
 
         if (processed.contains("who is shogun")) {
