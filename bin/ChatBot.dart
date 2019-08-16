@@ -1,6 +1,7 @@
 //todo integrate with pl's text engine, not just raw chat bot things (mostly if you didn't interest it)
 import 'FFMPEGWrapper.dart';
 import 'Subjects/Subject.dart';
+import 'Subjects/Topic.dart';
 import 'TextWriter.dart';
 import 'WaveWriter.dart';
 import 'package:CommonLib/Random.dart';
@@ -16,6 +17,7 @@ abstract class ChatBot {
 
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
     static void handleInput(String chatHandle, String input) async {
+        await Topic.initTextEngine();
         String text = await getOutput(input);
         chatLog = "$chatLog \n\n $chatHandle: $input\nButlerBot: $text";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
