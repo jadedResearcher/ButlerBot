@@ -18,4 +18,6 @@ You also want to ps -few | grep tts
  to turn off the server (there will be two processes)
   and then you can pub get and then ./magic_spell.sh
 
+  If the git dependencies start fucking up, go to ~/.pub-cache and delete everything in the git cache and just do pub get again and it should clear up.
+
 Don't forget to copy ButlerIsland to the root dir of farrangarok, so it does voidy shit.

@@ -10,5 +10,5 @@ environment:
 dependencies:
   args: ^1.4.2
   shelf: ^0.7.2
-  CommonLib:
-    path: gitpackages/CommonLib
+  TextEngine:
+    git: git://github.com/FarragoFiction/TextEngine.git
