@@ -18,7 +18,9 @@ abstract class ChatBot {
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
     static void handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
+        new Topic("test");
         String text = await getOutput(input);
+        text = "${Topic.allTopics["test"].response()} $text";
         chatLog = "$chatLog \n\n $chatHandle: $input\nButlerBot: $text";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         await WaveWriter.writeLocal("hello_butler_bot");

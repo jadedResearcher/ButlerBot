@@ -9,11 +9,11 @@ integer value between -85 and 85 representing how much he currently likes the su
  */
 
 /*
-    TODO: actually wire this in along side subjects (erase subjects as you mimik them)
+    TODO take in a list of keywords too
  */
 class Topic {
     static Map<String, Topic> allTopics = new Map<String,Topic>();
-    static String textEngineFileName = "indepth_topics";
+    static String textEngineFileName = "chatHandleShitPosts";
     String topicName;
     String get likeHeader => "${topicName}Like";
     String get neutralHeader => "${topicName}Neutral";

@@ -1,0 +1,36 @@
+TextEngine Word List
+
+@nouns
+@verbs
+@adjectives
+
+testLike
+  $firstWord$secondWord
+
+testNeutral
+  $firstWord$secondWord
+
+testDislike
+  $firstWord$secondWord
+
+firstWord
+    #adj_positive#
+    #adj_negative#
+    #adj_surprising#
+    #adj_spades#
+    #adj_hearts#
+    #adj_diamonds#
+    #adj_clubs#
+    #adj_large#
+    #adj_small#
+    #adj_old#
+    #adj_new#
+    #adj_shape#
+    #adj_tactile#
+    #adj_taste#
+    #adj_smell#
+    #adj_color#
+    #adj_material#
+
+secondWord
+    #noun#
