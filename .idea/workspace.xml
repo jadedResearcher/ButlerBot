@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65da64d1-52e0-4b4c-9df4-bb299c3da222" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bin/Subjects/OpinionEngine.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/ChatBot.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ChatBot.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Subjects/Topic.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/Topic.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/tts_server.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/tts_server.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/wordlists/chatHandleShitposts.words" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/wordlists/chatHandleShitposts.words" beforeDir="false" afterPath="$PROJECT_DIR$/bin/wordlists/topicResponses.words" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/farragotransfer.sh" beforeDir="false" afterPath="$PROJECT_DIR$/farragotransfer.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello_butler_bot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hello_butler_bot.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,14 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/TextWriter.dart">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/Subjects/OpinionEngine.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-              <folding>
-                <element signature="e#87#109#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="15" column="112" selection-start-line="15" selection-start-column="112" selection-end-line="15" selection-end-column="112" />
             </state>
           </provider>
         </entry>
@@ -82,7 +74,7 @@
         <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/TextEngine-64e0316772d136d480c6898fb01e96c9cda07e27/lib/src/text_engine.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="88" column="36" lean-forward="true" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
+              <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -105,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/wordlists/topicResponses.words">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -117,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-681">
-              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+            <state relative-caret-position="164">
+              <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding>
                 <element signature="e#104#132#0" expanded="true" />
               </folding>
@@ -144,6 +136,7 @@
       <find>meme</find>
       <find>joke</find>
       <find>topic</find>
+      <find>chatlog</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,10 +168,11 @@
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/bin/tts_server.dart" />
         <option value="$PROJECT_DIR$/farragotransfer.sh" />
-        <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
         <option value="$PROJECT_DIR$/bin/wordlists/chatHandleShitposts.words" />
         <option value="$PROJECT_DIR$/bin/Subjects/Topic.dart" />
         <option value="$PROJECT_DIR$/bin/wordlists/topicResponses.words" />
+        <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
+        <option value="$PROJECT_DIR$/bin/Subjects/OpinionEngine.dart" />
       </list>
     </option>
   </component>
@@ -273,13 +267,13 @@
     <frame x="-5" y="0" width="1368" height="928" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924925" visible="true" weight="0.32903227" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924925" weight="0.32903227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -288,7 +282,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007508" side_tool="true" weight="0.32903227" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49924925" weight="0.32903227" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.49924925" visible="true" weight="0.32903227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -492,13 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/TextEngine-71e9032d3c8e74adc850dba161592f5b80fcbfaf/lib/src/text_engine.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -509,17 +496,7 @@
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/TextEngine-64e0316772d136d480c6898fb01e96c9cda07e27/lib/src/text_engine.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="88" column="36" lean-forward="true" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-681">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding>
-            <element signature="e#104#132#0" expanded="true" />
-          </folding>
+          <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -540,10 +517,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding>
+            <element signature="e#104#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/wordlists/topicResponses.words">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Subjects/OpinionEngine.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="112" selection-start-line="15" selection-start-column="112" selection-end-line="15" selection-end-column="112" />
         </state>
       </provider>
     </entry>

@@ -21,7 +21,7 @@ abstract class ChatBot {
         new Topic("test");
         String text = await getOutput(input);
         text = "${Topic.allTopics["test"].response()} $text";
-        chatLog = "$chatLog \n\n $chatHandle: $input\nButlerBot: $text";
+        chatLog = "$chatLog \n\n ${DateTime.now()} $chatHandle: $input\nButlerBot: $text";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //await WaveWriter.writeLocal("hello_butler_bot");
         //await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
