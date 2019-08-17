@@ -1,6 +1,7 @@
 import 'dart:io';
-import 'dart:math';
+import 'dart:math' as Math;
 
+import 'package:CommonLib/Random.dart';
 import 'package:TextEngine/TextEngine.dart';
 
 import 'OpinionEngine.dart';
@@ -34,7 +35,7 @@ class Topic {
     static int minOpinion = -85;
     static TextEngine textEngine;
     int _rating = 0; //every time guide bot restarts he gets amnesia
-    int get rating => max(min(maxOpinion, _rating),minOpinion);
+    int get rating => Math.max(Math.min(maxOpinion, _rating),minOpinion);
 
     static RegExp punctuationpattern = new RegExp("[.,\/#!%\^&\*;:{}=\-_`~\(\)]");
 
@@ -92,6 +93,7 @@ class Topic {
     String  response() {
         story.setString("topic",topicName);
         story.setString("topicList",allTopics.values.join(','));
+        story.setString("mathPercent","${90+new Random().nextDoubleRange(0,10)}");
         if(rating > maxOpinion/2) {
             return textEngine.phrase(likeHeader, story: story);
         }else if(rating < minOpinion/2) {
@@ -107,6 +109,7 @@ class Topic {
         OpinionEngine.initOpinions();
         new Topic("test", ["test"]);
         new Topic("help", ["help","root","sudo","confused","how do i"]);
+        new Topic("me", ["who are you", "butlerBot","butler","who this","BB","what is your name","bot"]);
         new Topic("creator", ["creat","ff","despap","fonzi","admin","foreverFon","citato","lime","grace","rage"]);
         new Topic("bug", ["monster","underling","bug","caterpillar","butterfly","moth","insect","ant","worm","larva","maggot"]);
 

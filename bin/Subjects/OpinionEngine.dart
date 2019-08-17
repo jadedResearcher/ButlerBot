@@ -17,9 +17,9 @@ abstract class OpinionEngine {
         OpinionWord.initOpinionsWithRating(badWords, -1);
         List<String> goodWords = <String>["please", "thank", "sorry","apolog", "excuse", "i didn't mean", "i didnt mean","jade"];
         OpinionWord.initOpinionsWithRating(goodWords, 1);
-        List<String> mediumGood = <String>["like you","love you","friend", "best friend","life","corrupt","breed"];
+        List<String> mediumGood = <String>["like you","love you","friend", "best friend","life","corrupt","breed","father","mother","serpent","life bringer"];
         OpinionWord.initOpinionsWithRating(mediumGood, 13);
-        List<String> veryGoodWords = <String>["jr says", "father", "mother"];
+        List<String> veryGoodWords = <String>["jr says"];
         OpinionWord.initOpinionsWithRating(veryGoodWords, 85);
     }
 
