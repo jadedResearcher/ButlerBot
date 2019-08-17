@@ -91,6 +91,7 @@ class Topic {
 
     String  response() {
         story.setString("topic",topicName);
+        story.setString("topicList",allTopics.values.join(','));
         if(rating > maxOpinion/2) {
             return textEngine.phrase(likeHeader, story: story);
         }else if(rating < minOpinion/2) {
@@ -105,6 +106,7 @@ class Topic {
     static void initTopics() {
         OpinionEngine.initOpinions();
         new Topic("test", ["test"]);
+        new Topic("help", ["help","root","sudo","confused","how do i"]);
         new Topic("creator", ["creat","ff","despap","fonzi","admin","foreverFon","citato","lime","grace","rage"]);
         new Topic("bug", ["monster","underling","bug","caterpillar","butterfly","moth","insect","ant","worm","larva","maggot"]);
 

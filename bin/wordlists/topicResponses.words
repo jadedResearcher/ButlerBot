@@ -51,6 +51,7 @@ creatorNeutral
     Despap Citato made technology to help all the Players complete their lands on schedule, including me.
     FF made me to help LOMAT be completed on schedule.
     FF designed me to use your input to better complete LOMAT.
+    FF, with the help of YY,  realized that my organic doppelganger wouldn't be able to complete LOMAT, and so created me.
 
 creatorLike
     once, my creator told me that they used to be very different from who they are now. they like who they are now much better, it seems.
@@ -64,3 +65,19 @@ creatorDislike
     With all due respect, Observer, I am not obliged to speak of my creator to you.
     My SYSADMIN has instructed me to cease responding to inquiries about them.
     #genericDislike#
+
+helpNeutral
+    while i live to serve, this is the void and you will have to find the information you want yourself
+    i don't trust you enough to give you very much help, Observer. feel free to earn my trust
+    how can i help you, Observer? I understand words best if you have clear topics related to the Land of Mist  Trails, and Segundia
+
+helpLike
+    overall, you Observers have been very kind to me. I can't do much, as I am a simple robot, but here is a list of the topics I respond to, and how I feel about them. #noun|var@topicList#
+    I'm glad we are friends, Observer. here is a list of the things I talk best about, and how I currently feel about them: #noun|var@topicList#
+
+helpDislike
+    no
+    i'm afraid I can't do that, Observer
+    while i live to be of service, Observer, it is to those who deserve it
+    oh. would you like help, Observer? perhaps it is not too late to earn my trust.
+    i'm afraid you'll need to work off your, and the other Observer's bad reputation before we get anywhere

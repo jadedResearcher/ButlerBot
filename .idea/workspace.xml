@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65da64d1-52e0-4b4c-9df4-bb299c3da222" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/bin/Subjects/GuideSubjects.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/GuideSubjects.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Subjects/Topic.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/Topic.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/wordlists/topicResponses.words" beforeDir="false" afterPath="$PROJECT_DIR$/bin/wordlists/topicResponses.words" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello_butler_bot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hello_butler_bot.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,22 +27,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/Subjects/OpinionEngine.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/Subjects/Topic.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="107" column="110" selection-start-line="107" selection-start-column="110" selection-end-line="107" selection-end-column="110" />
+            <state relative-caret-position="53">
+              <caret line="93" column="62" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -52,6 +43,27 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="16" column="39" selection-start-line="16" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="32" column="39" selection-start-line="32" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/Subjects/GuideSubjects.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -71,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/wordlists/topicResponses.words">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="60" column="14" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+            <state relative-caret-position="393">
+              <caret line="81" column="82" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -108,6 +120,9 @@
       <find>negative</find>
       <find>chatLog</find>
       <find>it seems you</find>
+      <find>root bitch</find>
+      <find>eir</find>
+      <find>help</find>
       <find>textEngine</find>
     </findStrings>
   </component>
@@ -134,15 +149,15 @@
         <option value="$PROJECT_DIR$/bin/Subjects/YouSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/LamiaSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/LOMATSubjects.dart" />
-        <option value="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" />
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/farragotransfer.sh" />
         <option value="$PROJECT_DIR$/bin/wordlists/chatHandleShitposts.words" />
-        <option value="$PROJECT_DIR$/bin/Subjects/GuideSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/tts_server.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/OpinionEngine.dart" />
         <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
+        <option value="$PROJECT_DIR$/bin/Subjects/GuideSubjects.dart" />
+        <option value="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/Topic.dart" />
         <option value="$PROJECT_DIR$/bin/wordlists/topicResponses.words" />
       </list>
@@ -239,13 +254,13 @@
     <frame x="-5" y="0" width="1368" height="928" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924925" visible="true" weight="0.32903227" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924925" visible="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -435,29 +450,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Subjects/GuideSubjects.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/Subjects/Subject.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -496,16 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Subjects/Topic.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="107" column="110" selection-start-line="107" selection-start-column="110" selection-end-line="107" selection-end-column="110" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/Subjects/OpinionEngine.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -523,10 +511,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Subjects/GuideSubjects.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="32" column="39" selection-start-line="32" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Subjects/Topic.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="93" column="62" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/wordlists/topicResponses.words">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="60" column="14" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+        <state relative-caret-position="393">
+          <caret line="81" column="82" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="82" />
         </state>
       </provider>
     </entry>

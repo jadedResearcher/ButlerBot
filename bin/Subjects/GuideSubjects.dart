@@ -37,7 +37,7 @@ abstract class GuideSubjects extends Subject {
             ret.add("PP");
         }
 
-        if (processed.contains("Eirikr")) {
+        if (processed.contains("Eirikr") || processed.contains("doppelganger")) {
             ret.add("Eirikr");
         }
 
