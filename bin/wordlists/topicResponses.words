@@ -35,6 +35,8 @@ testDislike
 genericDislike
     Observer, I have no wish to speak of '#noun|var@topic#' any longer.
     Please, let us speak no more of '#noun|var@topic#'.
+    you need to leave
+    stop. talking.
 
 bugNeutral
     #topicPhrase# Bugs are #adj_negative# creatures.
@@ -129,7 +131,7 @@ wagonDislike
     wagon. noun. a horse-drawn vehicle, especially a covered wagon used by early settlers on trails
 
 playerNeutral
-    while i do indeed 'play' LOMAT, i am not its player, no.
+    #topicPhrase# while i do indeed 'play' LOMAT, i am not its player, no.
 
 playerLike
     I care deeply about each and every consort on LOMAT, but alas, as I am not their Player they have no bond to me
@@ -141,8 +143,8 @@ playerDislike
     yes. i am not the 'true player' of lomat. fuck off about it.
 
 guideNeutral
-    While a Guide leads, a Butler serves.
-    I might be a Guide at heart, but I have Chosen to be a Butler. How may I serve you?
+    #topicPhrase# While a Guide leads, a Butler serves.
+    #topicPhrase# I might be a Guide at heart, but I have Chosen to be a Butler. How may I serve you?
     guide is an example of a form, which represents the class of actions available to you in your session
 
 
@@ -274,6 +276,3 @@ corruptionDislike
     I do not need to listen to your incorrect opinions.
     the #nidhogPhrase# does not require you to understand them.
     #genericDislike#
-
-
-
