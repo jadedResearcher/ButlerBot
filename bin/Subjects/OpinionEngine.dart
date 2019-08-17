@@ -7,17 +7,19 @@ abstract class OpinionEngine {
     static List<Topic> currentOpinionTopics = [];
 
     static initOpinions() {
+        //in addition to changing BB's overall opinion based on what you say and how you say it,
+        // it gives it tendencies towards opinions about topics
         //don't say nidhogg's name for no reason, it annoys him
         //god it feels weird and wrong typing all these banned words :(
-        List<String> veryBadWords = <String>["real you","melon","nidhogg", "eagle","verthfolnir","pure","fag","retard","nigg","cunt","trap","pumpkin","hussie","dennis","homestuck","sburb"];
+        List<String> veryBadWords = <String>["real you","real player","true player","melon","nidhogg", "eagle","verthfolnir","pure","fag","retard","nigg","cunt","trap","pumpkin","hussie","dennis","homestuck","sburb", "andrew"];
         OpinionWord.initOpinionsWithRating(veryBadWords, -85);
-        List<String> mediumBad = <String>["fuck","cuck","jizz","anal","pussy","penis","peen","dick","sex","vagina"];
+        List<String> mediumBad = <String>["fuck","cuck","jizz","anal","pussy","penis","peen","dick","sex","vagina","daddy","mommy","bee","bees","vanessa","bloome","princess and the pea", "black and yellow","barry","jock","vannie","navy","seal"];
         OpinionWord.initOpinionsWithRating(mediumBad, -13);
-        List<String> badWords = <String>["shit","ass","bitch","damn","pant", "two leg","sterile","eirikr","bug"];
+        List<String> badWords = <String>["shit","ass","bitch","damn","pant", "two leg","sterile","eirikr","bug","mom","dad","eirikr","pp","pompousPsycho","psycho","pompous","kharun"];
         OpinionWord.initOpinionsWithRating(badWords, -1);
-        List<String> goodWords = <String>["please", "thank", "sorry","apolog", "excuse", "i didn't mean", "i didnt mean","jade"];
+        List<String> goodWords = <String>["please", "thank", "sorry","apolog", "excuse", "i didn't mean", "i didnt mean","jade","coin"];
         OpinionWord.initOpinionsWithRating(goodWords, 1);
-        List<String> mediumGood = <String>["like you","love you","friend", "best friend","life","corrupt","breed","father","mother","serpent","life bringer"];
+        List<String> mediumGood = <String>["like you","love you","friend", "best friend","life","corrupt","breed","father","mother","serpent","life bringer","about you","you like","segundia"];
         OpinionWord.initOpinionsWithRating(mediumGood, 13);
         List<String> veryGoodWords = <String>["jr says"];
         OpinionWord.initOpinionsWithRating(veryGoodWords, 85);

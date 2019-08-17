@@ -1,8 +1,6 @@
 import 'package:CommonLib/Random.dart';
 
-import 'GuideSubjects.dart';
 import 'LOMATSubjects.dart';
-import 'LamiaSubjects.dart';
 import 'PleasantrySubjects.dart';
 import 'SecretSubjects.dart';
 import 'YouSubjects.dart';
@@ -19,13 +17,7 @@ abstract class Subject {
         String response = PleasantrySubjects.getResponse(subject);
         if(response != null) return response;
 
-        response = LamiaSubjects.getResponse(subject);
-        if(response != null) return response;
-
         response = LOMATSubjects.getResponse(subject);
-        if(response != null) return response;
-
-        response = GuideSubjects.getResponse(subject);
         if(response != null) return response;
 
         response = YouSubjects.getResponse(subject);
@@ -48,9 +40,7 @@ abstract class Subject {
     static List<String> getSubjects(String input) {
         List<String> ret = new List<String>();
         ret.addAll(PleasantrySubjects.getSubjects(input));
-        ret.addAll(LamiaSubjects.getSubjects(input));
         ret.addAll(LOMATSubjects.getSubjects(input));
-        ret.addAll(GuideSubjects.getSubjects(input));
         ret.addAll(YouSubjects.getSubjects(input));
         ret.addAll(SecretSubjects.getSubjects(input));
 
@@ -60,9 +50,7 @@ abstract class Subject {
     static List<String> getSubjectList() {
         List<String> ret = new List<String>();
         ret.addAll(PleasantrySubjects.getSubjectList());
-        ret.addAll(LamiaSubjects.getSubjectList());
         ret.addAll(LOMATSubjects.getSubjectList());
-        ret.addAll(GuideSubjects.getSubjectList());
         ret.addAll(YouSubjects.getSubjectList());
         ret.addAll(SecretSubjects.getSubjectList());
 

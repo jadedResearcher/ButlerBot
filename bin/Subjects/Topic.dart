@@ -109,10 +109,19 @@ class Topic {
         OpinionEngine.initOpinions();
         new Topic("test", ["test"]);
         new Topic("help", ["help","root","sudo","confused","how do i"]);
-        new Topic("me", ["who are you", "butlerBot","butler","who this","BB","what is your name","bot"]);
+        new Topic("me", ["who are you", "butlerBot","butler","who this","bb","what is your name","bot","tell me about you","you like"]);
         new Topic("creator", ["creat","ff","despap","fonzi","admin","foreverFon","citato","lime","grace","rage"]);
         new Topic("bug", ["monster","underling","bug","caterpillar","butterfly","moth","insect","ant","worm","larva","maggot"]);
-
+        new Topic("wagon", ["wagon","boat","ship","cart"]);
+        new Topic("eirikr", ["pp","eirikr","doppelganger","real player","guide","pompousPsycho","true player","kharun"]);
+        new Topic("guide", ["guide"]);
+        new Topic("void", ["void","dark","nothing","irrelevant","hidden","secret"]);
+        new Topic("player", ["play","game","lomat","land of mists and trails","mists and trails"]);
+        new Topic("lamia", ["lamia","snake","serpent","fruit","plant", "echidna"]);
+        new Topic("segundia", ["segundia","alternia","empire"]);
+        new Topic("caste", ["caste","blood","leg","color"]);
+        new Topic("purity", ["purification","pure", "purity"]);
+        new Topic("corruption", ["corrupt"]);
     }
 
 }

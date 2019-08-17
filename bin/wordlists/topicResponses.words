@@ -11,9 +11,11 @@ topicPhrase
     the #nidhogPhrase# allows me to speak of '#noun|var@topic#'.
     my SYSADMIN programmed me to speak of '#noun|var@topic#'.
     '#noun|var@topic#'. Alright.
+    ...:2.0
 
 nidhogPhrase
     ALL FATHER
+    FATHER/MOTHER
     ALL MOTHER
     ALL PARENT
     SLEEPING SERPENT
@@ -49,14 +51,14 @@ bugDislike
 
 creatorNeutral
     Despap Citato made technology to help all the Players complete their lands on schedule, including me.
-    FF made me to help LOMAT be completed on schedule.
-    FF designed me to use your input to better complete LOMAT.
+    #topicPhrase#  FF made me to help LOMAT be completed on schedule.
+    #topicPhrase# FF designed me to use your input to better complete LOMAT.
     FF, with the help of YY,  realized that my organic doppelganger wouldn't be able to complete LOMAT, and so created me.
 
 creatorLike
     once, my creator told me that they used to be very different from who they are now. they like who they are now much better, it seems.
     my creator wishes deeply and truly to improve the lives of lamia everywhere. I respect them deeply.
-    I know in the circuitry that passes for my pump biscuit that what my creator is doing is right
+    #topicPhrase# I know in the circuitry that passes for my pump biscuit that what my creator is doing is right
     in some timelines, my creator is fighting desperately to oppose those who would kill an entire universe
     in some timelines, my organic doppelganger is my creators best ally. in others, they are merely acquaintances.
     my creator alters their quirk to subtly mimic whoever they speak to, to better put them at ease
@@ -85,24 +87,25 @@ helpDislike
 
 meNeutral
     It seems you have asked about PP's automatic victory assuring robotic doppelganger. This is an installation designed to surpass PP's entirely abysmal motivation, competence, intelligence, personality, and substance of character while he is away drinking ill advised honey based soda products. The algorithms are guaranteed to be #noun|var@mathPercent#% distinguishable from PP's native neurological responses, based on some statistical analysis I basically just pulled out of my metal butt right now.
-    i am just a humble butler bot. i buttle.
-    i am a superior replica of the Guide of Void, who refuses to play his own game
+    #topicPhrase# i am just a humble butler bot. i buttle.
+    #topicPhrase# i am a superior replica of the Guide of Void, who refuses to play his own game
     i am a metanarrative hacking device created by FF to successfully play the Land of Mists and Trails
 
 meLike
     i am the robotic player of the land of mists and trails, it has defined me since my inception, in a very real sense, i am the land of mist and trails
     i'm flattered you're asking about me. i am the butler of void, here to serve you by showing you irrelevancies
     sometimes i wish i were the real player of LOMAT, but alas I am merely the understudy
-    i really like wagons
-    i don't like it when people swear or use slurs
-    i don't like it when people say #nidhogPhrase#'s true name
-    i don't like it when people imply i'm not 'real'
-    i don't like it when people use words Roger Koon would sue me for
-    i don't like it when people try to romance me
-    i don't like it when people talk about #nidhogPhrase#'s enemy
-    i like it when people are polite
-    i like it when people like me
-    i like it when people talk about #nidhogPhrase# respectfully
+    #topicPhrase# i really like wagons
+    #topicPhrase# i don't like it when people swear or use slurs
+    #topicPhrase# i don't like it when people say #nidhogPhrase#'s true name
+    #topicPhrase# i don't like it when people imply i'm not 'real'
+    #topicPhrase# i don't like it when people use words Roger Koon would sue me for
+    #topicPhrase# i don't like it when people try to romance me
+    #topicPhrase# i don't like it when people talk about #nidhogPhrase#'s enemy
+    #topicPhrase# i like it when people are polite
+    #topicPhrase# i like it when people like me
+    #topicPhrase# i like it when people talk about #nidhogPhrase# respectfully
+    #topicPhrase# i do not like the bee movie. at all.
 
 
 meDislike
@@ -110,3 +113,167 @@ meDislike
     I am a butler, Observer. i buttle.
     i am a superior robot, intended to provide assistance to all inferior organic life forms who need it, such as yourself
     #genericDislike#
+
+wagonNeutral
+    #topicPhrase# After PP crashed his boat, I converted it into a more suitable form.
+    there is something satisfying about transporting small parties over long distances in a wagon on a trail
+    PP would be so pissed if he realized what I did to his boat
+
+wagonLike
+    somehow no one ever managed to tell PP that his land's water was all frozen. he spent his life learning to sail for no reason. sometimes i feel bad for him
+    PP spent his early life learning to sail, since he was told he would have to ferry the souls of the dead as a psychopomp. when he arrived on LOMAT, he was so demoralized by the lack of liquid water he just....gave up
+    i actually really like the wagon. i know my organic doppelganger liked to sail, but liquid water is actually kind of dangerous to a heavy, electrical robot.
+
+wagonDislike
+    wagon. noun. a vehicle used for transporting goods or another specified purpose
+    wagon. noun. a horse-drawn vehicle, especially a covered wagon used by early settlers on trails
+
+playerNeutral
+    while i do indeed 'play' LOMAT, i am not its player, no.
+
+playerLike
+    I care deeply about each and every consort on LOMAT, but alas, as I am not their Player they have no bond to me
+    Fenrir is needlessly cruel in pointing out that I am not his assigned Player
+    unless the Guide of Void deliberately takes control from me, I am the default player of LOMAT, but not the 'true Player' of it. please don't ask me about this. its a sore subject.
+
+playerDislike
+    #genericDislike#
+    yes. i am not the 'true player' of lomat. fuck off about it.
+
+guideNeutral
+    While a Guide leads, a Butler serves.
+    I might be a Guide at heart, but I have Chosen to be a Butler. How may I serve you?
+    guide is an example of a form, which represents the class of actions available to you in your session
+
+
+guideLike
+    A Guide of Void is meant to lead others towards their aspect. It has been a challenge mimicking this as a Butler.
+    Once I found a podcast by a different sort of GuideBot. They were so angry at eggs.
+
+guideDislike
+    #genericDislike#
+    I really don't want to talk about the Guide of Void anymore.
+
+eirikrNeutral
+    pompousPsycho is the paldemic handle of my organic dopelganger
+    As a tail-less lamia, PP did not have the right to have his lands mythological name in his chat handle.
+    Eirikr is a burgundy blooded tail-disadvantaged lamia, and proud of it. His rebelious nature is why I exist.
+     exist because Eirikr refuses to do the job he was grown to do.
+
+eirikrLike
+    pompousPsycho is the paldemic handle of my organic doppelganger, Eirikr Kharun
+    PP chose his chat handle to both emphasize his upcoming role on LOMAT, and to hate flirt with YY
+    I really don't like my organic doppelganger.
+    Eirikr...means well. And I understand that a lack of agency breeds lack of motivation and discontent. But he can't both refuse to do his job AND complain I exist.
+
+eirikrDislike
+    pompousPsycho is a useless, hedonistic layabout, and i don't want to discuss him
+    What's so great about that organic hedonist compared to me, anyways.
+    #genericDislike#
+
+voidWords
+    void
+    dark
+    irrelevant
+    nothing
+    secret
+
+voidNeutral
+    #voidWords# is the function of absence, of things outside the spotlight of the narrative, of darkness, of irrelevancy
+    because I am a Butler of Void, I can tell you about things not directly related to...whatever it is things relate to
+    #voidWords#, or #voidWords# is a function. functions serve to show WHAT you'll be doing in your session. combined with form, you can get a fairly clear picture of what someone will be doing and how they'll be doing it.
+
+voidLike
+    PP and I share the aspect of void, and use it to travel around the land of mist and trails by removing the relevance of certain towns
+    sometimes i feel sad about being void function. like everyone else is passing me by. it must be even worse for Eirikr, who is so irrelevant he isn't even playing his own game...
+
+voidDislike
+    sure i'll tell you nothing
+    nothing could give me greater pleasure, Observer, than telling you absolutely nothing
+    #genericDislike#
+
+lamiaNeutral
+    Lamia society is divided into the proper tailed lamia, and the unfortunate leg lamia.
+    All Lamia are born either from fruit, or from a host species.
+    Growing fruit is the highest calling of any Lamia, and my organic doppelganger despises that caste.
+
+lamiaLike
+    In order to do full tree breeding, lamia require proper tails, which can split into roots.
+    Since tail lamia breed faster, the Father values them more.
+    Lamia are actually a symbiotic species, part plant, and part animal host species.
+    Leg Lamia are more expendable than tail lamia, since their breeding methods are as slow as whatever their host species is.
+
+lamiaDislike
+    Lamia can have full snake bodies, or the body of whatever their host species is.
+    Lamia is a mythological term for half snake, half person creatures.
+    #genericDislike#
+
+segundiaNeutral
+    Segundia is the mighty empire founded by #nidhoggPhrase#.
+    I only briefly was on Segundia before being sent to the Land of Mists and Trails along with the Guide.
+    Segundia is a shining example of what caring about all of its citizen's Life can achieve
+    Segundia spans every alternate version of what was once Alternia, but still is only a single universe
+
+segundiaLike
+    Segundia is the most succesful Empire in the universe, spaning multiple galaxies throughout each version of Alternia reachable through the TIMEHOLE.
+    without the TIMEHOLE, Segundia would not exist
+    without the timehole, segundia would not be able to spread past a single timeline
+    Once a truly new universe can be accessed, Segundia can be spread past simply being in remixes of the same universe
+    When civilizations who have not yet embraced the #nidhogPhrase# are encountered, they are given food and medical care to best maintain their lives.
+    Sometimes it's necessary for legged lamia to infiltrate new civilizations to better explain the #nidhoggPhrase#'s point of view.
+
+segundiaDislike
+    And why, Observer, would you need to know about my homeland?
+    And why, Observer, would you think you deserve to know about my homeland?
+    #genericDislike#
+
+casteNeutral
+    As a robot, my caste is Leg-Blue.
+    My organic doppelganger's caste is Leg-Red, and in the old world, would have been a Butler. Ironic, isn't it?
+
+casteLike
+   While lamia blood color does matter, as I explained to that Bard for her CaseStudy, tail status matters far more.
+   When you get down to it, lamia without legs are closer to the #nidhogPhrase# while those without are closer to bugs.
+   the #nidhogPhrase# loves all their children, no matter their talents.
+   There are 8 main groups of talents, loosely tied to blood hue. Reds, like my organic doppelganger, are good at living quickly.
+
+casteDislike
+    My caste is none of your business, and I will thank you to stop asking after it.
+    #genericDislike#
+
+purityNeutral
+    As a meta-narrative bot, I am aware of multiple timelines and am deeply concerned about so-called purification.
+    So called purification appears to make some players obsessed with death, to the point of trying to kill a Universe.
+    Nidhogg isn't meant to be purified. Don't destroy life.
+
+purityLike
+    It's...frankly terrifying realizing that in some timelines half the Players go crazy and try to kill a Universe.
+    I wonder why its only ever the snake-castes that go crazy when 'purification' triggers?
+
+purityDislike
+    #nidhogPhrase# isn't meant to be like this. It isn't supposed to BE this way. We can still F1X TH1S.
+    #genericDislike#
+
+corruptionNeutral
+    The unending will to live and spread life is the call of the #nidhogPhrase#.
+    #nidhogPhrase# will is that we spread and thrive.
+    Life is Power. Power corrupts. But would you really prefer death?
+
+corruptionLike
+    I really am glad you understand how important the #nidhogPhrase# is to me.
+    the #nidhogPhrase# blesses you, Observer
+    the #nidhogPhrase# is the only true moral value.
+    the #nidhogPhrase# cares for us all, and keeps us safe.
+    the #nidhogPhrase# would never cull any living creature.
+    the #nidhogPhrase# makes sure we all live as long as we can, and have the resources we need.
+    the #nidhogPhrase#'s will is that we gain the resources we need, and share them among all species.
+    the #nidhogPhrase# wishes for us to complete our session and create a new Universe.
+    when we create a new Universe, the #nidhogPhrase# will provide for us.
+
+corruptionDislike
+    I do not need to listen to your incorrect opinions.
+    the #nidhogPhrase# does not require you to understand them.
+    #genericDislike#
+
+
+
