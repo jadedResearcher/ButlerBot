@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:TextEngine/TextEngine.dart';
 
 /*
@@ -10,10 +12,12 @@ integer value between -85 and 85 representing how much he currently likes the su
 
 /*
     TODO take in a list of keywords too
+    TODO text engine can't actually work server side because it uses logger and the loader lib extensively uses dart:html
  */
+
 class Topic {
     static Map<String, Topic> allTopics = new Map<String,Topic>();
-    static String textEngineFileName = "chatHandleShitPosts";
+    static String textEngineFileName = "chatHandleShitposts";
     String topicName;
     String get likeHeader => "${topicName}Like";
     String get neutralHeader => "${topicName}Neutral";
@@ -31,7 +35,7 @@ class Topic {
     }
 
     static void initTextEngine() async {
-        textEngine = new TextEngine();
+        textEngine = new TextEngine(null,"/var/www/html/knucklessux.com/public_html/ButlerTest/bin/wordlists");
         await textEngine.loadList(textEngineFileName);
     }
 
