@@ -14,11 +14,12 @@ abstract class ChatBot {
     static String chatLog = "";
 
     static List<String> subjects;
+    static List<Topic> topics;
 
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
     static void handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
-        new Topic("test");
+        new Topic("test", ["test"]);
         String text = await getOutput(input);
         text = "${Topic.allTopics["test"].response()} $text";
         chatLog = "$chatLog \n\n ${DateTime.now()} $chatHandle: $input\nButlerBot: $text";
@@ -67,10 +68,25 @@ abstract class ChatBot {
         //first establish the subject(s). then, get responses for that subject.
         //only say up to 5 responses at a time , no matter how many subjects
         subjects = Subject.getSubjects(input);
+        topics = Topic.getTopics(input);
+        Topic.formOpinions(topics, input);
         int responses = 0;
         int maxResponses = 3;
         String ret = "";
-        if(subjects.isEmpty) ret = (Subject.getConfusedPhrase(input));
+        if(subjects.isEmpty && topics.isEmpty) ret = (Subject.getConfusedPhrase(input));
+
+        for(Topic topic in topics) {
+            if(responses > maxResponses) {
+                break;
+            }
+            responses ++;
+            if(responses > 1) {
+                ret = "$ret ${getJoiningWord()}, ${getSubjectPhrase(topic.topicName)} ${topic.response()}";
+            }else {
+                ret = "${getSubjectPhrase(topic.topicName)} ${topic.response()}";
+            }
+        }
+
         for(String subject in subjects) {
             if(responses > maxResponses) {
                 break;
