@@ -17,7 +17,7 @@ integer value between -85 and 85 representing how much he currently likes the su
 
 class Topic {
     static Map<String, Topic> allTopics = new Map<String,Topic>();
-    static String textEngineFileName = "chatHandleShitposts";
+    static String textEngineFileName = "topicResponses";
     String topicName;
     String get likeHeader => "${topicName}Like";
     String get neutralHeader => "${topicName}Neutral";
@@ -35,7 +35,7 @@ class Topic {
     }
 
     static void initTextEngine() async {
-        textEngine = new TextEngine(null,"/var/www/html/knucklessux.com/public_html/ButlerTest/bin/wordlists");
+        textEngine = new TextEngine(null,"${Uri.file(Directory.current.path).toFilePath()}/bin/wordlists");
         await textEngine.loadList(textEngineFileName);
     }
 
@@ -46,7 +46,7 @@ class Topic {
     String  response() {
         if(opinion > maxOpinion/2) {
             return textEngine.phrase(likeHeader);
-        }else if(opinion < maxOpinion/2) {
+        }else if(opinion < minOpinion/2) {
             return textEngine.phrase(dislikeHeader);
         }else {
             return textEngine.phrase(neutralHeader);

@@ -19,7 +19,7 @@
         <entry key="TextEngine">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/git/TextEngine-71e9032d3c8e74adc850dba161592f5b80fcbfaf/lib" />
+              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/git/TextEngine-64e0316772d136d480c6898fb01e96c9cda07e27/lib" />
             </list>
           </value>
         </entry>
@@ -196,7 +196,7 @@
     <CLASSES>
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/CommonLib-547a7f4598138a1d7865ec37b2e2b34ac328ad5c/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/LoaderLib-4e3ad1b226c413159dab60d0e9e6ebb5a1ec6a13/lib" />
-      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/TextEngine-71e9032d3c8e74adc850dba161592f5b80fcbfaf/lib" />
+      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/TextEngine-64e0316772d136d480c6898fb01e96c9cda07e27/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/archive-2.0.10/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/args-1.5.2/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/async-2.3.0/lib" />

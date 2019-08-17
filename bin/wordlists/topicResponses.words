@@ -1,0 +1,14 @@
+TextEngine Word List
+
+@nouns
+@verbs
+@adjectives
+
+testNeutral
+    hello test
+
+testLike
+    #noun#
+
+testDislike
+    #noun#
