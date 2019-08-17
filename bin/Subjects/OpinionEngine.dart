@@ -13,8 +13,8 @@ abstract class OpinionEngine {
         OpinionWord.initOpinionsWithRating(veryBadWords, -85);
         List<String> mediumBad = <String>["fuck","cuck","jizz","anal","pussy","penis","peen","dick","sex","vagina"];
         OpinionWord.initOpinionsWithRating(mediumBad, -13);
-        List<String> badWords = <String>["shit","ass","bitch","damn","pant", "two leg","sterile","eirikr"];
-        OpinionWord.initOpinionsWithRating(mediumBad, -1);
+        List<String> badWords = <String>["shit","ass","bitch","damn","pant", "two leg","sterile","eirikr","bug"];
+        OpinionWord.initOpinionsWithRating(badWords, -1);
         List<String> goodWords = <String>["please", "thank", "sorry","apolog", "excuse", "i didn't mean", "i didnt mean","jade"];
         OpinionWord.initOpinionsWithRating(goodWords, 1);
         List<String> mediumGood = <String>["like you","love you","friend", "best friend","life","corrupt","breed"];

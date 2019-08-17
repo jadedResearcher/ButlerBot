@@ -12,3 +12,21 @@ testLike
 
 testDislike
     #noun#
+    #genericDislike#
+
+genericDislike
+    Observer, I have no wish to speak of '#noun|var@topic#' any longer.
+    Please, let us speak no more of '#noun|var@topic#'.
+
+bugNeutral
+    Bugs are #adj_negative# creatures.
+    Much as bugs devour innocent plants and the #adj_positive# fruit they bear, the underlings of LOMAT exist only to pester and annoy.
+
+bugLike
+    It seems that the enemies of our session are bugs specifically to torment us. In other sessions, and in the past, they were more neutral creatures. The power of the AllParent spurs on ever stronger enemies to oppose them.
+    While the AllFather cherishes all Life, bugs and other vermin exist only to take from the collective. The underlings of Fenrir and the other Titans are no match for our might.
+    It is said that the First Society before Segundia was made of Bug People. Terrible. This means, of course, that any Lamia who closely resemble those who came before, as I unfortunately do, are more loathsome as a matter of course. I try hard to overcome this.:0.5
+
+bugDislike
+    In fact, Observer, you remind me quite a bit of insects.
+    #genericDislike#

@@ -21,7 +21,6 @@ abstract class ChatBot {
     static void handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
         String text = await getOutput(input);
-        text = "${Topic.allTopics["test"].response()} $text";
         chatLog = "$chatLog \n\n ${DateTime.now()} \n~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //await WaveWriter.writeLocal("hello_butler_bot");
