@@ -1,5 +1,6 @@
 //todo integrate with pl's text engine, not just raw chat bot things (mostly if you didn't interest it)
 import 'FFMPEGWrapper.dart';
+import 'Subjects/OpinionEngine.dart';
 import 'Subjects/Subject.dart';
 import 'Subjects/Topic.dart';
 import 'TextWriter.dart';
@@ -19,10 +20,9 @@ abstract class ChatBot {
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
     static void handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
-        new Topic("test", ["test"]);
         String text = await getOutput(input);
         text = "${Topic.allTopics["test"].response()} $text";
-        chatLog = "$chatLog \n\n ${DateTime.now()} $chatHandle: $input\nButlerBot: $text";
+        chatLog = "$chatLog \n\n ${DateTime.now()} \n~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //await WaveWriter.writeLocal("hello_butler_bot");
         //await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
@@ -69,7 +69,7 @@ abstract class ChatBot {
         //only say up to 5 responses at a time , no matter how many subjects
         subjects = Subject.getSubjects(input);
         topics = Topic.getTopics(input);
-        Topic.formOpinions(topics, input);
+        int opinion = Topic.formOpinions(topics, input);
         int responses = 0;
         int maxResponses = 3;
         String ret = "";

@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:math';
 import 'ChatBot.dart';
 import 'StatusQuery.dart';
+import 'Subjects/Topic.dart';
 import 'TestHandler.dart';
 import 'TextWriter.dart';
 
@@ -27,7 +28,7 @@ Future main() async {
     8500,
   );
   print('Listening on localhost:${server.port}');
-
+  Topic.initTopics();
 
   await for (HttpRequest request in server) {
     request.response.headers.add("Access-Control-Allow-Origin", "*");

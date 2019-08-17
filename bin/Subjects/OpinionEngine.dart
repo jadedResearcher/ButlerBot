@@ -3,6 +3,9 @@ import 'Topic.dart';
 
 abstract class OpinionEngine {
 
+    static int currentOpinion = 0;
+    static List<Topic> currentOpinionTopics = [];
+
     static initOpinions() {
         //don't say nidhogg's name for no reason, it annoys him
         //god it feels weird and wrong typing all these banned words :(

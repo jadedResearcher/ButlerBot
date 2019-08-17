@@ -14,8 +14,11 @@ integer value between -85 and 85 representing how much he currently likes the su
  */
 
 /*
-    TODO take in a list of keywords too
-    TODO text engine can't actually work server side because it uses logger and the loader lib extensively uses dart:html
+    TODO: topic list
+    underlings
+    gulls
+    beavers
+    trees
  */
 
 class Topic {
@@ -45,7 +48,7 @@ class Topic {
         return ret;
     }
 
-    static formOpinions(List<Topic> topics, String input) {
+    static int formOpinions(List<Topic> topics, String input) {
         int rating = OpinionEngine.rateInput(input);
         if(topics.isNotEmpty) {
             topics.forEach((Topic topic) => topic.changeOpinionByAmount(rating));
@@ -53,7 +56,9 @@ class Topic {
             //no topic chosen, oh well, looks like we're applying it in tiny form across the board
             allTopics.values.forEach((Topic topic) => topic.changeOpinionByAmount((rating/allTopics.values.length).ceil()));
         }
-
+        OpinionEngine.currentOpinion = rating;
+        OpinionEngine.currentOpinionTopics = topics;
+        return rating;
     }
 
     static String getProcessed(String input) {
@@ -92,6 +97,11 @@ class Topic {
         }
     }
 
+    String toString() => "[$topicName: $rating]";
 
+    static void initTopics() {
+        OpinionEngine.initOpinions();
+        new Topic("test", ["test"]);
+    }
 
 }
