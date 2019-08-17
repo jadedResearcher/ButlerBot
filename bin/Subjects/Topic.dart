@@ -105,6 +105,7 @@ class Topic {
     static void initTopics() {
         OpinionEngine.initOpinions();
         new Topic("test", ["test"]);
+        new Topic("creator", ["creat","ff","despap","fonzi","admin","foreverFon","citato","lime","grace","rage"]);
         new Topic("bug", ["monster","underling","bug","caterpillar","butterfly","moth","insect","ant","worm","larva","maggot"]);
 
     }
