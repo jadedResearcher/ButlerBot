@@ -25,6 +25,7 @@ class Topic {
     static Map<String, Topic> allTopics = new Map<String,Topic>();
     static String textEngineFileName = "topicResponses";
     String topicName;
+    static TextStory story;
     List<String> keywords;
     String get likeHeader => "${topicName}Like";
     String get neutralHeader => "${topicName}Neutral";
@@ -67,6 +68,7 @@ class Topic {
     }
 
     static void initTextEngine() async {
+        story = new TextStory();
         textEngine = new TextEngine(null,"${Uri.file(Directory.current.path).toFilePath()}/bin/wordlists");
         await textEngine.loadList(textEngineFileName);
     }
@@ -88,12 +90,13 @@ class Topic {
     }
 
     String  response() {
+        story.setString("topic",topicName);
         if(rating > maxOpinion/2) {
-            return textEngine.phrase(likeHeader);
+            return textEngine.phrase(likeHeader, story: story);
         }else if(rating < minOpinion/2) {
-            return textEngine.phrase(dislikeHeader);
+            return textEngine.phrase(dislikeHeader, story: story);
         }else {
-            return textEngine.phrase(neutralHeader);
+            return textEngine.phrase(neutralHeader, story: story);
         }
     }
 

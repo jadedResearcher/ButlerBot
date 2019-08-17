@@ -51,17 +51,6 @@ abstract class ChatBot {
         return rand.pickFrom(choices);
     }
 
-    static String getSubjectPhrase(String subject) {
-        WeightedList<String> choices = new WeightedList<String>();
-        choices.add("it seems you have asked about $subject. ", 3.0);
-        choices.add("do you mean $subject? ", 1.0);
-        choices.add("", 13);
-        choices.add("we are now talking about $subject.", 0.5);
-        choices.add("the ALL FATHER allows me to speak of $subject", 0.3);
-        choices.add("my SYSADMIN allows me to speak of $subject", 0.3);
-        Random rand = new Random();
-        return rand.pickFrom(choices);
-    }
 
     static Future<String> getOutput(String input) async {
         //first establish the subject(s). then, get responses for that subject.
@@ -80,9 +69,9 @@ abstract class ChatBot {
             }
             responses ++;
             if(responses > 1) {
-                ret = "$ret ${getJoiningWord()}, ${getSubjectPhrase(topic.topicName)} ${topic.response()}";
+                ret = "$ret ${getJoiningWord()}, ${topic.response()}";
             }else {
-                ret = "${getSubjectPhrase(topic.topicName)} ${topic.response()}";
+                ret = "${topic.response()}";
             }
         }
 
@@ -92,10 +81,10 @@ abstract class ChatBot {
             }
             responses ++;
             if(responses > 1) {
-                ret = "$ret ${getJoiningWord()}, ${getSubjectPhrase(subject)} ${Subject
+                ret = "$ret ${getJoiningWord()}, ${Subject
                     .getResponse(subject)}";
             }else {
-                ret = "${getSubjectPhrase(subject)} ${Subject
+                ret = "${Subject
                     .getResponse(subject)}";
             }
         }
