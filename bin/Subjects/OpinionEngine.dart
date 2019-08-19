@@ -17,9 +17,9 @@ abstract class OpinionEngine {
         OpinionWord.initOpinionsWithRating(mediumBad, -13);
         List<String> badWords = <String>["shit","ass","bitch","damn","pant", "two leg","sterile","eirikr","bug","mom","dad","eirikr","pp","pompousPsycho","psycho","pompous","kharun"];
         OpinionWord.initOpinionsWithRating(badWords, -1);
-        List<String> goodWords = <String>["please", "thank", "sorry","apolog", "excuse", "i didn't mean", "i didnt mean","jade","coin","bye","seeya","cya","i have to go"];
+        List<String> goodWords = <String>["please", "thank", "sorry","apolog", "excuse", "i didn't mean", "i didnt mean","jade","coin","bye","seeya","cya","i have to go","despap","sysadmin","good"];
         OpinionWord.initOpinionsWithRating(goodWords, 1);
-        List<String> mediumGood = <String>["like you","love you","friend", "best friend","life","corrupt","breed","father","mother","serpent","life bringer","about you","you like","segundia","how are you", "how's it going","how have you been","are you okay"];
+        List<String> mediumGood = <String>["do you want","like you","love you","friend", "best friend","life","corrupt","breed","father","mother","serpent","life bringer","about you","you like","segundia","how are you", "how's it going","how have you been","are you okay","sir"];
         OpinionWord.initOpinionsWithRating(mediumGood, 13);
         List<String> veryGoodWords = <String>["jr says"];
         OpinionWord.initOpinionsWithRating(veryGoodWords, 85);

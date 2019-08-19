@@ -77,7 +77,7 @@ helpNeutral
 
 helpLike
     overall, you Observers have been very kind to me. I can't do much, as I am a simple robot, but here is a list of the topics I respond to, and how I feel about them. #noun|var@topicList#
-    I'm glad we are friends, Observer. here is a list of the things I talk best about, and how I currently feel about them: #noun|var@topicList#
+    I'm glad we are friends, Observer. here is a list of the things I talk best about, and how I currently feel about them. #noun|var@topicList#
 
 helpDislike
     no
