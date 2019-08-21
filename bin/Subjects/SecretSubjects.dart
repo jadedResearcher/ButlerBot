@@ -75,31 +75,31 @@ abstract class SecretSubjects extends Subject {
             ret.add("romance");
         }
 
-        if (processed.contains("bard") || processed.contains("manic") || processed.contains("MI")) {
+        if (processed.contains("bard") || processed.contains("manic") || processed.contains("mi")) {
             ret.add("manicInsomniac");
         }
 
-        if (processed.contains("neb") || processed.contains("nebulousHarmony") || processed.contains("NH")) {
+        if (processed.contains("neb") || processed.contains("nebulousHarmony") || processed.contains("nh")) {
             ret.add("nebulousHarmony");
         }
 
-        if (processed.contains("paradoxLands") || processed.contains("PL") || processed.contains("witch")) {
+        if (processed.contains("paradoxLands") || processed.contains("pl") || processed.contains("witch")) {
             ret.add("paradoxLands");
         }
 
-        if (processed.contains("karmicRetribution") || processed.contains("smith") || processed.contains("KR")) {
+        if (processed.contains("karmicRetribution") || processed.contains("smith") || processed.contains("kr")) {
             ret.add("karmicRetribution");
         }
 
-        if (processed.contains("tableGuardian") || processed.contains("TG")) {
+        if (processed.contains("tableGuardian") || processed.contains("tg")) {
             ret.add("tableGuardian");
         }
 
-        if (processed.contains("aspiringWatcher") || processed.contains("AW")) {
+        if (processed.contains("aspiringWatcher") || processed.contains("aw")) {
             ret.add("aspiringWatcher");
         }
 
-        if (processed.contains("insufferableOracle") || processed.contains("IO")) {
+        if (processed.contains("insufferableOracle") || processed.contains("io")) {
             ret.add("insufferableOracle");
         }
 
