@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:math';
 import 'ChatBot.dart';
 import 'StatusQuery.dart';
+import 'Subjects/Feelings.dart';
 import 'Subjects/Topic.dart';
 import 'TestHandler.dart';
 import 'TextWriter.dart';
@@ -29,6 +30,8 @@ Future main() async {
   );
   print('Listening on localhost:${server.port}');
   Topic.initTopics();
+  Feelings.waitForThings();
+  ChatBot.generateOutput("Initializing...","Hello, my name is ButlerBot and I am awaiting input.");
 
   await for (HttpRequest request in server) {
     request.response.headers.add("Access-Control-Allow-Origin", "*");

@@ -18,17 +18,23 @@ abstract class ChatBot {
     static List<String> subjects;
     static List<Topic> topics;
 
+
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
-    static void handleInput(String chatHandle, String input) async {
+    static Future<void> handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
         String text = await getOutput(input);
         chatLog = "$chatLog \n\n ${DateTime.now()} \n~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text";
+        generateOutput("Response to ${chatHandle}'s Input: $input",text);
+        print("chatLog is: $chatLog");
+    }
+
+    static Future<void> generateOutput(String summary, String text) async {
+        print("$text");
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //TODO turn back on
         //await WaveWriter.writeLocal("hello_butler_bot");
         //await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
-        //await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", "Response to ${chatHandle}'s Input: $input", text );
-        print("chatLog is: $chatLog");
+        //await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", input, text );
     }
 
     static void echoInput(String chatHandle, String input) async {
