@@ -1,7 +1,7 @@
 //be can feel lonely or overwhelmed, and can have feelings about the player
 //if bb has a feeling about a TOPIC, its kept in the topic
 import 'Suspicion.dart';
-
+//todo if lonely, bb might talk to himself (one message an hour) things like "is anyone there?"
 abstract class Feelings {
 
     static final String titlePlaceholder = "<INSERT_TITLE_HERE>";

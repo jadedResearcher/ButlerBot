@@ -1,5 +1,6 @@
 //todo integrate with pl's text engine, not just raw chat bot things (mostly if you didn't interest it)
 import 'FFMPEGWrapper.dart';
+import 'Subjects/Feelings.dart';
 import 'Subjects/OpinionEngine.dart';
 import 'Subjects/Subject.dart';
 import 'Subjects/Topic.dart';
@@ -89,7 +90,8 @@ abstract class ChatBot {
                     .getResponse(subject)}";
             }
         }
-        return ret;
+
+        return ret.replaceAll(Feelings.titlePlaceholder,Feelings.getTitle());
     }
 
 
