@@ -30,8 +30,8 @@ Future main() async {
   );
   print('Listening on localhost:${server.port}');
   Topic.initTopics();
+  ChatBot.spontaneousMessage("Initializing...","Hello, my name is ButlerBot and I am awaiting input.");
   Feelings.waitForThings();
-  ChatBot.generateOutput("Initializing...","Hello, my name is ButlerBot and I am awaiting input.");
 
   await for (HttpRequest request in server) {
     request.response.headers.add("Access-Control-Allow-Origin", "*");
@@ -44,6 +44,10 @@ Future main() async {
       request.response.write("thank you for your input");
     }else if(request.uri.toString().contains("ChatLogHax")) {
       request.response.write(ChatBot.chatLog);
+    }else if(request.uri.toString().contains("LunchTime")) {
+      request.response.write(Feelings.lunchStart);
+    }else if(request.uri.toString().contains("BreakTime")) {
+      request.response.write(Feelings.breakStart);
     }
 
     if(!request.uri.toString().contains("ResponseStatus")) {

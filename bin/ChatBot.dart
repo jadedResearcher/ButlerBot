@@ -23,13 +23,22 @@ abstract class ChatBot {
     static Future<void> handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
         String text = await getOutput(input);
-        chatLog = "$chatLog \n\n ${DateTime.now()} \n~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text";
+        updateChatLog("\n~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text");
         generateOutput("Response to ${chatHandle}'s Input: $input",text);
-        print("chatLog is: $chatLog");
+    }
+
+    static void updateChatLog(log){
+        chatLog = "$chatLog \n\n ${DateTime.now()} $log";
+        print(chatLog);
+    }
+
+    static Future<void> spontaneousMessage(String summary, String text) async{
+        text = text.replaceAll(Feelings.titlePlaceholder,Feelings.getTitle());
+        updateChatLog("$summary: $text");
+        await generateOutput(summary,text);
     }
 
     static Future<void> generateOutput(String summary, String text) async {
-        print("$text");
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //TODO turn back on
         //await WaveWriter.writeLocal("hello_butler_bot");
