@@ -69,7 +69,7 @@ abstract class Feelings {
         //TODO lunch time is between noon and noon thirty
         //TODO if you were NOT on lunch break and now you are, you need to tell the user y ou're going on break
         final now = DateTime.now();
-        final noon = new DateTime(now.year, now.month, now.day, 13);
+        final noon = new DateTime(now.year, now.month, now.day, 12);
         if(now.difference(noon).inMinutes < 30) {
             lunchStart = now;
             ChatBot.spontaneousMessage("Lunch Time...",lunchMessage());
