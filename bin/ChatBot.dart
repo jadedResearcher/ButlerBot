@@ -23,9 +23,10 @@ abstract class ChatBot {
         String text = await getOutput(input);
         chatLog = "$chatLog \n\n ${DateTime.now()} \n~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text";
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
-        await WaveWriter.writeLocal("hello_butler_bot");
-        await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
-        await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", "Response to ${chatHandle}'s Input: $input", text );
+        //TODO turn back on
+        //await WaveWriter.writeLocal("hello_butler_bot");
+        //await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
+        //await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", "Response to ${chatHandle}'s Input: $input", text );
         print("chatLog is: $chatLog");
     }
 
