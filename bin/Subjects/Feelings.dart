@@ -25,7 +25,6 @@ abstract class Feelings {
     static int overwhelmed = 0;
 
     static void waitForThings(){
-        print("wait");
         activityIn15Minutes.clear();
         //TODO every 15 minutes, check if you should START lunch/break and check if you are lonely (if you are, talk to yourself)
         if(lunchStart == null && breakStart == null) {
@@ -41,7 +40,7 @@ abstract class Feelings {
         if(breakStart != null) {
             checkBreakEnd();
         }
-        new Timer(new Duration(minutes: 1), () => {
+        new Timer(new Duration(minutes: 15), () => {
         waitForThings()
         });
     }
@@ -96,7 +95,7 @@ abstract class Feelings {
 
     static void checkBreak() {
         final now = DateTime.now();
-        if(lastBreak == null || now.difference(lastBreak).inHours <= 8) {
+        if(lastBreak == null || now.difference(lastBreak).inHours >= 8) {
             breakStart = now;
             lastBreak = now;
             ChatBot.spontaneousMessage("Break Time...",breakMessage());
