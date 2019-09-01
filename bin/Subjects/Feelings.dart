@@ -18,12 +18,16 @@ abstract class Feelings {
     //if start isn't set, not currently on break
     static DateTime lunchStart;
     static DateTime breakStart;
-    static DateTime lastBreak;
+    static DateTime lastBreak = DateTime.now();
 
     static List<String> activityIn15Minutes = new List<String>();
+    //how many characters per 15 minutes (
+    static int overwhelmedThreshold = 15*3*85;
 
     //how many WORDS in the past 15 minutes.
-    static int get  overwhelmedQuotient => activityIn15Minutes.map((String str) => str.length).reduce((value, element) => value +element);
+    //have to make a list because iterable is lazy apparently. lame.
+    static double get  overwhelmedQuotient =>activityIn15Minutes.map((String str) => str.length).fold(0,(value, element) => value +element)/overwhelmedThreshold;
+    static double get lonelinessQuotient => loneliness/lonelinessThreshold;
     static List<Suspicion> all_suspicions = new List<Suspicion>();
     static int loneliness =0; //goes to zero as soon as he's messaged
     static int lonelinessThreshold = (4*60/15).ceil(); //if no one has talked to bb in 4 hours, he should talk to himself
@@ -66,13 +70,14 @@ abstract class Feelings {
         if(activityIn15Minutes.isEmpty) {
             loneliness ++;
         }
-        if(loneliness > lonelinessThreshold) {
+        if(lonelinessQuotient > 1) {
             //TODO send lonely message (possibly changing suspicions)
         }
     }
 
     static void checkOverwhelmed() {
-        if(overwhelmedQuotient > 15*3*13) { //three 13 word messages a minute are too much (nicely works out to 585)
+        if(overwhelmedQuotient > 1) { //three 13 word messages a minute are too much (nicely works out to 585)
+            print("panick breaking");
             takeBreak(true);
         }
     }

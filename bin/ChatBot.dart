@@ -26,15 +26,19 @@ abstract class ChatBot {
         await Topic.initTextEngine();
         String text = await getOutput(input);
         text = text.replaceAll(Feelings.titlePlaceholder,Feelings.getTitle());
-        if(Feelings.breakStart != null && Feelings.lunchStart != null) {
+        if(Feelings.breakStart ==  null && Feelings.lunchStart == null) {
             Feelings.activityIn15Minutes.add(input);
+            Feelings.checkOverwhelmed();
+            if(Feelings.breakStart != null) return; //emergency break
+        }else {
+           // print("on break, not responding to input");
         }
         updateChatLog("\n~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text");
         generateOutput("Response to ${chatHandle}'s Input: $input",text);
     }
 
     static void updateChatLog(log){
-        chatLog = "$chatLog \n\n ${DateTime.now()} (Loneliness Quotient: ${Feelings.loneliness} Overwhelmed Quotient: ${Feelings.overwhelmedQuotient} ) $log";
+        chatLog = "$chatLog \n\n ${DateTime.now()} (Loneliness Quotient: ${Feelings.lonelinessQuotient} Overwhelmed Quotient: ${Feelings.overwhelmedQuotient} ) $log";
         print(chatLog);
     }
 
