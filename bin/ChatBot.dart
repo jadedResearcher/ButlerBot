@@ -1,5 +1,6 @@
 //todo integrate with pl's text engine, not just raw chat bot things (mostly if you didn't interest it)
 import 'FFMPEGWrapper.dart';
+import 'StatusQuery.dart';
 import 'Subjects/Feelings.dart';
 import 'Subjects/OpinionEngine.dart';
 import 'Subjects/Subject.dart';
@@ -12,6 +13,7 @@ import 'package:CommonLib/Collection.dart';
 //todo consider having vague memory so its twitch plays conversation trees
 
 abstract class ChatBot {
+    static List<StatusQuery> statusQueries = new List<StatusQuery>();
 
     static String chatLog = "";
 
@@ -40,6 +42,7 @@ abstract class ChatBot {
         text = text.replaceAll(Feelings.titlePlaceholder,Feelings.getTitle());
         updateChatLog("$summary: $text");
         await generateOutput(summary,text);
+        answerQueries();
     }
 
     static Future<void> generateOutput(String summary, String text) async {
@@ -53,6 +56,14 @@ abstract class ChatBot {
       await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
       await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", summary, text );
 
+    }
+
+    //lets there be an async push notification about when theres new input
+    static void answerQueries() {
+        for(StatusQuery q in statusQueries) {
+            q.close();
+        }
+        statusQueries.clear();
     }
 
     static void echoInput(String chatHandle, String input) async {

@@ -55,7 +55,7 @@ abstract class Feelings {
         if(panicky) {
             return "Please. I. I. I. I need a break. I need to stop. I'll be back.";
         }
-        List<String> messages = <String>["Please wait, ${Feelings.titlePlaceholder}. I am currently on my 15 minute break.","I will be ready to resume after my 15 minute break, ${Feelings.titlePlaceholder}.","Please be patient. I am currently on break, ${Feelings.titlePlaceholder}."];
+        List<String> messages = <String>["Please wait, ${Feelings.titlePlaceholder}. I am currently on my 15 minute break.","I will be ready to resume after my 15 minute break, ${Feelings.titlePlaceholder}.","Please be patient. I am currently on my 15 minute break, ${Feelings.titlePlaceholder}."];
         return new Random().pickFrom(messages);
     }
 

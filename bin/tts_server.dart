@@ -20,7 +20,6 @@ make a dart project for k whatever. shows everything in a table
  */
 
 bool waitMode = false;
-List<StatusQuery> statusQueries = new List<StatusQuery>();
 
 Future main() async {
 
@@ -40,7 +39,7 @@ Future main() async {
       await processInput(request);
     }else if(request.uri.toString().contains("JRHAXBUTITSFORAREALLYGOODPURPOSE")) {
       await ChatBot.echoInput("JR",request.uri.queryParameters['input']);
-      answerQueries();
+      ChatBot.answerQueries();
       request.response.write("thank you for your input");
     }else if(request.uri.toString().contains("ChatLogHax")) {
       request.response.write(ChatBot.chatLog);
@@ -48,13 +47,15 @@ Future main() async {
       request.response.write(Feelings.lunchStart);
     }else if(request.uri.toString().contains("BreakTime")) {
       request.response.write(Feelings.breakStart);
+    }else if(request.uri.toString().contains("BroadcastTest")) {
+      ChatBot.spontaneousMessage("BroadcastTest","This has been a test of the emergency broadcast system.");
     }
 
     if(!request.uri.toString().contains("ResponseStatus")) {
       request.response.close();
     }else {
       //don't close yet.
-      statusQueries.add(new StatusQuery(request));
+      ChatBot.statusQueries.add(new StatusQuery(request));
     }
   }
 }
@@ -78,16 +79,10 @@ Future<Null> processInput(HttpRequest request) async{
   input = input.substring(0,min(500, input.length));
   await ChatBot.handleInput(chatHandle,input);
   request.response.write("thank you for your input");
-  answerQueries();
+  ChatBot.answerQueries();
 }
 
-//lets there be an async push notification about when theres new input
-void answerQueries() {
-  for(StatusQuery q in statusQueries) {
-    q.close();
-  }
-  statusQueries.clear();
-}
+
 
 void waitTillNewInput() {
   waitMode = true;
