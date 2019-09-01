@@ -21,3 +21,5 @@ You also want to ps -few | grep tts
   If the git dependencies start fucking up, go to ~/.pub-cache and delete everything in the git cache and just do pub get again and it should clear up.
 
 Don't forget to copy ButlerIsland to the root dir of farrangarok, so it does voidy shit.
+ (the individual files and directories, like scripts or whatever)
+  cp -r ButlerIsland/* .
