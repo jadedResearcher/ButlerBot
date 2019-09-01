@@ -49,6 +49,11 @@ Future main() async {
       request.response.write(Feelings.breakStart);
     }else if(request.uri.toString().contains("BroadcastTest")) {
       ChatBot.spontaneousMessage("BroadcastTest","This has been a test of the emergency broadcast system.");
+      request.response.write("This has been a test of the emergency broadcast system.");
+    }else if(request.uri.toString().contains("JRSaysGoOnBreakBBYoureCranky")) {
+      ChatBot.spontaneousMessage("Forced Break","JR says I have to go on break.");
+      Feelings.takeBreak(false);
+      request.response.write("Okay JR.");
     }
 
     if(!request.uri.toString().contains("ResponseStatus")) {
