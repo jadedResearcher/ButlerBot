@@ -45,7 +45,7 @@ abstract class ChatBot {
     static Future<void> generateOutput(String summary, String text) async {
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //everything underneat this needs turned off to run local
-        //await generateAudioOutput(summary, text);
+        await generateAudioOutput(summary, text);
     }
 
     static Future generateAudioOutput(String summary, String text) async {
