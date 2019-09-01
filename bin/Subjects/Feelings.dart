@@ -21,6 +21,9 @@ abstract class Feelings {
     static DateTime lastBreak;
 
     static List<String> activityIn15Minutes = new List<String>();
+
+    //how many WORDS in the past 15 minutes.
+    static int get  overwhelmedQuotient => activityIn15Minutes.map((String str) => str.length).reduce((value, element) => value +element);
     static List<Suspicion> all_suspicions = new List<Suspicion>();
     static int loneliness =0; //goes to zero as soon as he's messaged
     static int lonelinessThreshold = (4*60/15).ceil(); //if no one has talked to bb in 4 hours, he should talk to himself
@@ -69,7 +72,7 @@ abstract class Feelings {
     }
 
     static void checkOverwhelmed() {
-        if(activityIn15Minutes.length > 15*3) { //three messages a minute are too much
+        if(overwhelmedQuotient > 15*3*13) { //three 13 word messages a minute are too much (nicely works out to 585)
             takeBreak(true);
         }
     }

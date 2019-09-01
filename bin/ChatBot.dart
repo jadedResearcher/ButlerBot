@@ -34,7 +34,7 @@ abstract class ChatBot {
     }
 
     static void updateChatLog(log){
-        chatLog = "$chatLog \n\n ${DateTime.now()} (Loneliness Quotient: ${Feelings.loneliness} Overwhelmed Quotient: ${Feelings.activityIn15Minutes.length} ) $log";
+        chatLog = "$chatLog \n\n ${DateTime.now()} (Loneliness Quotient: ${Feelings.loneliness} Overwhelmed Quotient: ${Feelings.overwhelmedQuotient} ) $log";
         print(chatLog);
     }
 
