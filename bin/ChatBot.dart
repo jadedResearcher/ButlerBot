@@ -23,12 +23,16 @@ abstract class ChatBot {
     static Future<void> handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
         String text = await getOutput(input);
+        text = text.replaceAll(Feelings.titlePlaceholder,Feelings.getTitle());
+        if(Feelings.breakStart != null && Feelings.lunchStart != null) {
+            Feelings.activityIn15Minutes.add(input);
+        }
         updateChatLog("\n~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text");
         generateOutput("Response to ${chatHandle}'s Input: $input",text);
     }
 
     static void updateChatLog(log){
-        chatLog = "$chatLog \n\n ${DateTime.now()} $log";
+        chatLog = "$chatLog \n\n ${DateTime.now()} (Loneliness Quotient: ${Feelings.loneliness} Overwhelmed Quotient: ${Feelings.activityIn15Minutes.length} ) $log";
         print(chatLog);
     }
 
@@ -40,10 +44,15 @@ abstract class ChatBot {
 
     static Future<void> generateOutput(String summary, String text) async {
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
-        //TODO turn back on
-        //await WaveWriter.writeLocal("hello_butler_bot");
-        //await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
-        //await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", input, text );
+        //everything underneat this needs turned off to run local
+        //await generateAudioOutput(summary, text);
+    }
+
+    static Future generateAudioOutput(String summary, String text) async {
+      await WaveWriter.writeLocal("hello_butler_bot");
+      await FFMPEGWrapper.convertWavToMP3AndOGG("hello_butler_bot","/var/www/html/knucklessux.com/public_html/JR/AudioLogs/Raw/");
+      await TextWriter.writePodcastJSON("/var/www/html/knucklessux.com/public_html/JR/AudioLogs/json/hello_butler_bot.json","Gosh I wonder why this exists??? What does it mean??? Who is speaking???","ButlerBot", summary, text );
+
     }
 
     static void echoInput(String chatHandle, String input) async {
@@ -70,6 +79,13 @@ abstract class ChatBot {
 
 
     static Future<String> getOutput(String input) async {
+        if(Feelings.breakStart != null) {
+            return Feelings.breakMessage(false);
+        }
+
+        if(Feelings.lunchStart != null) {
+            return Feelings.lunchMessage();
+        }
         //first establish the subject(s). then, get responses for that subject.
         //only say up to 5 responses at a time , no matter how many subjects
         subjects = Subject.getSubjects(input);
@@ -106,7 +122,7 @@ abstract class ChatBot {
             }
         }
 
-        return ret.replaceAll(Feelings.titlePlaceholder,Feelings.getTitle());
+        return ret;
     }
 
 

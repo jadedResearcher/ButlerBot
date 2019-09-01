@@ -33,6 +33,7 @@ abstract class SecretSubjects extends Subject {
         responses["memes"] = <String>["on my tombstone i want peperony and chease","your mom","despacito","hey now you're an all star get your game on get paid","one thing i dont know why it doesnt even matter how hard you try keep that in mind i designed this rhyme i will explain in due time","I am going to sleep now. ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ","Badger badger badger badger mushroom! mushroom! snake! oh a snake!","Who loves Arby's??? I love Arby's!!!","LUNCH TIMEMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"];
         responses["make me a sandwich"] = <String>["No. You can't make me."];
         responses["sudo make me a sandwich"] = <String>["No. You don't have root access."];
+        responses["fair compensation"] = <String>["ButlerBux are the compensation provided to me for my service answering queries.","For every 85 ButlerBux I earn, I can purchase the ability to say rude words to you one time."];
 
     }
 
@@ -50,6 +51,10 @@ abstract class SecretSubjects extends Subject {
     static List<String> getSubjects(String input) {
         String processed = Subject.getProcessed(input);
         List<String> ret = new List<String>();
+
+        if (processed.contains("butlerbux") || processed.contains("butler bux")) {
+            ret.add("fair compensation");
+        }
 
         if (processed.contains("better than expected") ||
             processed.contains("[???]") || processed.contains("???")) {
