@@ -24,7 +24,6 @@ abstract class Feelings {
     //how many characters per 15 minutes (
     static int overwhelmedThreshold = 15*3*85;
 
-    static int butlerBux = 0;
 
     //how many WORDS in the past 15 minutes.
     //have to make a list because iterable is lazy apparently. lame.

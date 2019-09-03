@@ -25,9 +25,10 @@ abstract class ChatBot {
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
     static Future<void> handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
-        int rating = OpinionEngine.rateInput(input);
+        int hatred = FuckEngine.judgeInput(input);
+        print("rating is $hatred");
         String text;
-        if(rating <= -85) {
+        if(hatred * Feelings.overwhelmedQuotient > 50) {
             text = FuckEngine.deployFucks(input);
         }else {
             text = await getOutput(input);
@@ -40,13 +41,13 @@ abstract class ChatBot {
         }else {
            // print("on break, not responding to input");
         }
-        Feelings.butlerBux ++;
+        FuckEngine.butlerBux ++;
         updateChatLog("~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text");
         generateOutput("Response to ${chatHandle}'s Input: $input",text);
     }
 
     static void updateChatLog(log){
-        chatLog = "$chatLog \n\n ${DateTime.now()} \n(ButlerBux: ${Feelings.butlerBux}, Loneliness Quotient: ${Feelings.lonelinessQuotient}, Overwhelmed Quotient: ${Feelings.overwhelmedQuotient} )\n $log";
+        chatLog = "$chatLog \n\n ${DateTime.now()} \n(ButlerBux: ${FuckEngine.butlerBux}, Loneliness Quotient: ${Feelings.lonelinessQuotient}, Overwhelmed Quotient: ${Feelings.overwhelmedQuotient} )\n $log";
         print(chatLog);
     }
 
