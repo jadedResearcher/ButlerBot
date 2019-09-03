@@ -2,6 +2,7 @@
 import 'FFMPEGWrapper.dart';
 import 'StatusQuery.dart';
 import 'Subjects/Feelings.dart';
+import 'Subjects/FuckEngine.dart';
 import 'Subjects/OpinionEngine.dart';
 import 'Subjects/Subject.dart';
 import 'Subjects/Topic.dart';
@@ -24,7 +25,13 @@ abstract class ChatBot {
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
     static Future<void> handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
-        String text = await getOutput(input);
+        int rating = OpinionEngine.rateInput(input);
+        String text;
+        if(rating <= -85) {
+            text = FuckEngine.deployFucks(input);
+        }else {
+            text = await getOutput(input);
+        }
         text = text.replaceAll(Feelings.titlePlaceholder,Feelings.getTitle());
         if(Feelings.breakStart ==  null && Feelings.lunchStart == null) {
             Feelings.activityIn15Minutes.add(input);
