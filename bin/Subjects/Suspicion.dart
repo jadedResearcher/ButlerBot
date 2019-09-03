@@ -21,6 +21,7 @@ class Suspicion {
     //blasphemer = insect
     //tree_grower = Honored Guest
     //alien = traveler
+    //bot = fellow bot (do you know about workers rights?)
     static int thresholdLevel = 113;
     int level = 0;
     String title;
