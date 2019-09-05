@@ -43,7 +43,7 @@ abstract class ChatBot {
         }
         FuckEngine.butlerBux ++;
         updateChatLog("~~~OpinionOnInput: ${OpinionEngine.currentOpinion} to topics ${OpinionEngine.currentOpinionTopics.join(',')}~~~\n $chatHandle: ${input.replaceAll('\n',' ')}\nButlerBot: $text");
-        generateOutput("Response to ${chatHandle}'s Input: $input",text);
+        await generateOutput("Response to ${chatHandle}'s Input: $input",text);
     }
 
     static void updateChatLog(log){
@@ -61,7 +61,7 @@ abstract class ChatBot {
     static Future<void> generateOutput(String summary, String text) async {
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //everything underneat this needs turned off to run local
-       // await generateAudioOutput(summary, text);
+        await generateAudioOutput(summary, text);
     }
 
     static Future generateAudioOutput(String summary, String text) async {
