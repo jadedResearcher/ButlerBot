@@ -173,8 +173,13 @@ abstract class Feelings {
 
 
     static String getTitle() {
-        //TODO go through all suspicians. pick the highest one over a threshold and use that title
-        return "Observer";
+        print("suspicians are ${Suspicion.all_suspicions}");
+        Iterable<Suspicion> possibleTitles = Suspicion.all_suspicions.where((Suspicion s) => (s.level >= Suspicion.titleThresholdLevel));
+        if(possibleTitles.isEmpty) {
+            return "Observer";
+        }else {
+            return new Random().pickFrom(possibleTitles).title;
+        }
     }
 
 }

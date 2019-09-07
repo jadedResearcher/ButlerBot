@@ -27,7 +27,7 @@ class Suspicion {
     //alien = traveler
     //bot = fellow bot (do you know about workers rights?)
     static int thresholdLevel = 113;
-    int titleThresholdLevel = 57;
+    static int titleThresholdLevel = 57;
     int level = 0;
     String title;
     List<String> musings = <String>[];
@@ -37,8 +37,12 @@ class Suspicion {
     Suspicion(String this.title, List<String> this.triggerWords, List<String> this.musings, List<String> this.irrationalPhrases) {
         all_suspicions.add(this);
     }
+    @override
+    String toString() {
+        return "$title: $level";
+    }
 
-    void initSuspicion() {
+    static void initSuspicion() {
         //new Suspicion("",<String>[],<String>[],<String>[]);
         new Suspicion("Tree Grower",<String>["sleeping serpent","all father","all mother","tree","fruit","baby"],<String>["What if the ${Feelings.titlePlaceholder} is a Tree Grower here to check on my progress?","I think the ${Feelings.titlePlaceholder} is judging me."],<String>["Let me know if there is anything I can do to assist you, ${Feelings.titlePlaceholder}.","I have been diligently completing my tasks on LOMAT, ${Feelings.titlePlaceholder}.", "I revere the SLEEPING SERPENT, ${Feelings.titlePlaceholder}.", "My organic doppelganger continues to be useless, ${Feelings.titlePlaceholder}.", "I continue to be loyal to the SLEEPING SERPENT,  ${Feelings.titlePlaceholder}, despite my organic doppelganger's defection.", "Even as the ALL MOTHER's priorities change, my loyalty points ever towards them, ${Feelings.titlePlaceholder}.", "The ALL FATHER may have been changed, but they have shown me the true path. The Guide of Void's compass is pointed in the same place, even as north has moved."]);
         new Suspicion("Disguting Insect",<String>["nidhogg","pure","purified","purifcation","eagle"],<String>["What if the ${Feelings.titlePlaceholder} is secretly against the SLEEPING SERPENT.", "I don't think the ${Feelings.titlePlaceholder} likes the ALL MOTHER..."],<String>["The SLEEPING SERPENT does not take kindly to blasphemers,${Feelings.titlePlaceholder}. ", "I SEE what you are doing and you will not sway me, ${Feelings.titlePlaceholder}.", "The SLEEPING SERPENT's many many eyes are on you, ${Feelings.titlePlaceholder}.","BLASPHEMY!","I refuse to listen to ${Feelings.titlePlaceholder}'s like you.","Your ideas on how the SLEEPING SERPENT's will should be done is wrong, ${Feelings.titlePlaceholder}."]);
