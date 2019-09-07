@@ -3,7 +3,7 @@
 import 'dart:async';
 
 import 'package:CommonLib/Random.dart';
-
+import 'dart:math' as Math;
 import '../ChatBot.dart';
 import 'Suspicion.dart';
 //todo if lonely, bb might talk to himself (one message an hour) things like "is anyone there?"
@@ -17,6 +17,7 @@ abstract class Feelings {
     static final String titlePlaceholder = "<INSERT_TITLE_HERE>";
     //if start isn't set, not currently on break
     static DateTime lunchStart;
+    static DateTime lastLonely;
     static DateTime breakStart;
     static DateTime lastBreak = DateTime.now();
 
@@ -67,12 +68,57 @@ abstract class Feelings {
         return new Random().pickFrom(messages);
     }
 
+    static String beLonely() {
+        //TODO randomly modify suspicians, and if you do have bb muse to himself about them
+        List<String> messages = <String>["Is there anyone there?","I'm lonely.", "I wish someone was here to talk to.", "Its been a long time since anyone was here.", "I can practice singing to pass the time. ${sing()}"];
+        return new Random().pickFrom(messages);
+
+    }
+
+    static String sing() {
+        List<String> sounds = <String>["z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a","*","^","@","9","8","7","6","5","4","3","2","1","0"];
+        List<String> vowels = <String>["a","e","i","o","u"];
+        List<String> phonemes =  <String>[];
+        for(String sound in sounds) {
+            for(String vowel in vowels) {
+                phonemes.add("$sound$vowel");
+            }
+        }
+        sounds.addAll(phonemes);
+
+
+        Random rand = new Random();
+        String ret = "";
+        List<String> chosenSounds = <String>[];
+        int numberSounds = rand.nextIntRange(1,5);
+        for(int i = 0; i< numberSounds; i++) {
+            chosenSounds.add(rand.pickFrom(sounds));
+        }
+        int numberSections = rand.nextIntRange(1,13);
+        for(int i = 0; i<numberSections; i++) {
+            int numberRepetitions = rand.nextIntRange(1,3);
+            String sound = rand.pickFrom(chosenSounds);
+            for(int j = 0; j<numberRepetitions; j++) {
+                ret = "${ret}${sound}";
+            }
+            //pause for breath between sounds, or not
+            if(rand.nextDouble() <.9) {
+                ret = "$ret ";
+            }
+        }
+        //no infinite songs please
+        return ret.substring(0,Math.min(ret.length, 85));
+    }
+
     static void checkLonely() {
         if(activityIn15Minutes.isEmpty) {
             loneliness ++;
         }
-        if(lonelinessQuotient > 1) {
-            //TODO send lonely message (possibly changing suspicions)
+        final now = DateTime.now();
+
+        if(lonelinessQuotient > 1 && (lastLonely== null || lastLonely.difference(now).inHours.abs() >= 1) ) {
+            lastLonely = now;
+            ChatBot.spontaneousMessage("I'm lonely...","Is anyone there? Please?");
         }
     }
 

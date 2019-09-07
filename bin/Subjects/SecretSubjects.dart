@@ -1,6 +1,7 @@
 import 'package:CommonLib/Collection.dart';
 import 'package:CommonLib/Random.dart';
 
+import 'Feelings.dart';
 import 'Subject.dart';
 import 'Topic.dart';
 
@@ -20,7 +21,7 @@ abstract class SecretSubjects extends Subject {
         responses["jrs height"] =<String>["i don't know how tall jr is.", "i have never met jr, so i dont' know how tall they are."];
         responses["numbers"] =<String>["I like numbers, I like pi. pi is aproximately ${22/7}", "my favorite number this millisecond is ${new Random().nextInt()}"];
         responses["romance"] =<String>["iiiii. i don't know what to say. i do not like you that way, Observer.", "while the stereotype of robots being 'emotionless tin cans' is a hurtful one, i am sorry to say i do not feel the same way about you, Observer"];
-        responses["e"] =<String>["yyyyyyyyyyyyyy","iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii","uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "ooooooooooooooooooooooooooooooo"];
+        responses["e"] =<String>["^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@","yyyyyyyyyyyyyy","iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii","uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "ooooooooooooooooooooooooooooooo","mmmmmmmmmmmmmmmmmmm"];
         responses["shogun"] =<String>["i don't know who that is.", "they sound nice, whoever they are"];
         responses["junior"] =<String>["junior seems to somehow be involved in the creation of this game", "junior makes weird podcasts", "junior is a 'waste of mind', whatever that means"];
         responses["nebulousHarmony"] = <String>["They seem to like talking about aspects?"];
@@ -40,6 +41,9 @@ abstract class SecretSubjects extends Subject {
     static String getResponse(String subject) {
         if(responses.isEmpty) initResponses();
         Random rand = new Random();
+        if(subject == "sing") {
+            return "Alright, I will sing. ${Feelings.sing()}";
+        }
         if(responses.containsKey(subject)){
             return rand.pickFrom(responses[subject]);
         }else{
@@ -54,6 +58,10 @@ abstract class SecretSubjects extends Subject {
 
         if (processed.contains("butlerbux") || processed.contains("butler bux")) {
             ret.add("fair compensation");
+        }
+
+        if (processed.contains(" sing ")) {
+            ret.add("sing");
         }
 
         if (processed.contains("better than expected") ||
