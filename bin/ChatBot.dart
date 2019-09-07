@@ -25,6 +25,7 @@ abstract class ChatBot {
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
     static Future<void> handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
+        Feelings.loneliness = 0;
         int hatred = FuckEngine.judgeInput(input);
         print("rating is $hatred");
         String text;
