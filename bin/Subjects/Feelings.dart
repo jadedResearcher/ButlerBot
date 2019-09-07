@@ -76,7 +76,7 @@ abstract class Feelings {
     }
 
     static String sing() {
-        List<String> sounds = <String>["z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a","*","^","@","9","8","7","6","5","4","3","2","1","0"];
+        List<String> sounds = <String>[".","z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a","*","^","@","9","8","7","6","5","4","3","2","1","0"];
         List<String> vowels = <String>["a","e","i","o","u"];
         List<String> phonemes =  <String>[];
         for(String sound in sounds) {
@@ -118,7 +118,7 @@ abstract class Feelings {
 
         if(lonelinessQuotient > 1 && (lastLonely== null || lastLonely.difference(now).inHours.abs() >= 1) ) {
             lastLonely = now;
-            ChatBot.spontaneousMessage("I'm lonely...","Is anyone there? Please?");
+            ChatBot.spontaneousMessage("Lonely",beLonely());
         }
     }
 
