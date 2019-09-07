@@ -128,6 +128,9 @@ abstract class ChatBot {
         if(Feelings.lunchStart != null) {
             return Feelings.lunchMessage();
         }
+        String paranoidRet = Suspicion.considerBeingParanoid(input);
+        //if i'm paranoid it overrides all logic
+        if(paranoidRet != null) return paranoidRet;
         //first establish the subject(s). then, get responses for that subject.
         //only say up to 5 responses at a time , no matter how many subjects
         subjects = Subject.getSubjects(input);

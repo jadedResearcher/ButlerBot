@@ -40,6 +40,7 @@ abstract class Feelings {
             checkBreak();
             checkLonely();
             checkOverwhelmed();
+            Suspicion.chill();
         }
 
         if(lunchStart != null) {
@@ -70,6 +71,8 @@ abstract class Feelings {
     static String beLonely() {
         //TODO randomly modify suspicians, and if you do have bb muse to himself about them
         List<String> messages = <String>["Is there anyone there?","I'm lonely.", "I wish someone was here to talk to.", "Its been a long time since anyone was here.", "I can practice singing to pass the time. ${sing()}"];
+        Suspicion musing = Suspicion.considerMusing();
+        if(musing != null) return musing.deliverMusings();
         return new Random().pickFrom(messages);
 
     }

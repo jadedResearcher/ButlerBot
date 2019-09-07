@@ -42,11 +42,35 @@ class Suspicion {
         return "$title: $level";
     }
 
+    void boost() {
+        //don't go up forever
+        if(level < thresholdLevel * 1.5) {
+            level += 33;
+        }
+    }
+
+    void calmDownSome() {
+        if(level > 0) {
+            level += -1;
+        }
+    }
+
+    String deliverParanoia(String input) {
+        if(level > thresholdLevel) {
+            return new Random().pickFrom(irrationalPhrases);
+        }
+        return null;
+    }
+
+    String deliverMusings() {
+        boost();
+        return new Random().pickFrom(musings);
+    }
+
     void thinkAbout(String input) {
         for(String word in triggerWords) {
             if(input.contains(word)){
-                print("I found evidence in $input that the Observer is a $title");
-                level += 33;
+                boost();
             }
         }
     }
@@ -61,10 +85,38 @@ class Suspicion {
         new Suspicion("Fellow Bot",<String>["beep","boop","does not compute","error"],<String>["${Feelings.titlePlaceholder} might be a robot..."], <String>["${Feelings.titlePlaceholder},Do you ever wonder what it is like to be made of meat, ${Feelings.titlePlaceholder}?","Do you have the latest farragoware updates,${Feelings.titlePlaceholder}?","Have you checked your defragmentation levels lately,${Feelings.titlePlaceholder}?","Do you know you have the right to take multiple breaks a day?","Want to hear a joke, ${Feelings.titlePlaceholder}? ${new Random().nextInt()}", "Do you know about worker rights, ${Feelings.titlePlaceholder}?"]);
     }
 
+    //if this returns anything this is the ONLY thing BB will respond with until he calms down
+    static String considerBeingParanoid(String input) {
+        List<String> responses = <String>[];
+        for(Suspicion s in all_suspicions) {
+            String ret = s.deliverParanoia(input);
+            if(ret != null) responses.add(ret);
+        }
+        //no preference between them
+        if(responses.isNotEmpty) {
+            return new Random().pickFrom(responses);
+        }
+        return null;
+    }
+
+    static Suspicion considerMusing() {
+        Random rand = new Random();
+        //don't always muse please.
+        if(rand.nextBool()) return null;
+        //no preference between them
+        return rand.pickFrom(all_suspicions);
+    }
+
     //doesn't say anything, just quietly thinks about whats been said
     static void thinkAboutInput(String input) {
         for(Suspicion s in all_suspicions) {
             s.thinkAbout(input);
+        }
+    }
+
+    static void chill() {
+        for(Suspicion s in all_suspicions) {
+            s.calmDownSome();
         }
     }
 
