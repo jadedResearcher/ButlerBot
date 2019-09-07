@@ -55,8 +55,15 @@ class Suspicion {
         }
     }
 
+    void calmDownALot() {
+        if(level > 0) {
+            level += -10;
+        }
+    }
+
     String deliverParanoia(String input) {
-        if(level > thresholdLevel) {
+        if(level >= thresholdLevel) {
+            calmDownALot(); //calm down faster when you're actually going to ramble about this
             return new Random().pickFrom(irrationalPhrases);
         }
         return null;
