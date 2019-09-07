@@ -14,7 +14,7 @@ import 'Suspicion.dart';
 //and instead of it being random maybe he loops on his last few suspicions ?
 abstract class Feelings {
 
-    static final String titlePlaceholder = "<INSERT_TITLE_HERE>";
+    static final String titlePlaceholder = "INSERT_TITLE_HERE";
     //if start isn't set, not currently on break
     static DateTime lunchStart;
     static DateTime lastLonely;

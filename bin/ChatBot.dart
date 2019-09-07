@@ -5,6 +5,7 @@ import 'Subjects/Feelings.dart';
 import 'Subjects/FuckEngine.dart';
 import 'Subjects/OpinionEngine.dart';
 import 'Subjects/Subject.dart';
+import 'Subjects/Suspicion.dart';
 import 'Subjects/Topic.dart';
 import 'TextWriter.dart';
 import 'WaveWriter.dart';
@@ -26,6 +27,7 @@ abstract class ChatBot {
     static Future<void> handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
         Feelings.loneliness = 0;
+        Suspicion.thinkAboutInput(input);
         int hatred = FuckEngine.judgeInput(input);
         print("rating is $hatred");
         String text;

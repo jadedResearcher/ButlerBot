@@ -5,8 +5,8 @@ TextEngine Word List
 @adjectives
 
 topicPhrase
-    it seems you have asked about '#noun|var@topic#'.
-    do you mean '#noun|var@topic#'?
+    it seems you have asked about '#noun|var@topic#', INSERT_TITLE_HERE.
+    do you mean '#noun|var@topic#',INSERT_TITLE_HERE?
     we are now talking about '#noun|var@topic#'.
     the #nidhogPhrase# allows me to speak of '#noun|var@topic#'.
     my SYSADMIN programmed me to speak of '#noun|var@topic#'.
@@ -33,7 +33,7 @@ testDislike
     #genericDislike#
 
 genericDislike
-    Observer, I have no wish to speak of '#noun|var@topic#' any longer.
+    INSERT_TITLE_HERE, I have no wish to speak of '#noun|var@topic#' any longer.
     Please, let us speak no more of '#noun|var@topic#'.
     you need to leave
     stop. talking.
@@ -48,7 +48,7 @@ bugLike
     It is said that the First Society before Segundia was made of Bug People. Terrible. This means, of course, that any Lamia who closely resemble those who came before, as I unfortunately do, are more loathsome as a matter of course. I try hard to overcome this.:0.5
 
 bugDislike
-    #topicPhrase# in fact, Observer, you remind me quite a bit of insects.
+    #topicPhrase# in fact, INSERT_TITLE_HERE, you remind me quite a bit of insects.
     #genericDislike#
 
 creatorNeutral
@@ -66,25 +66,25 @@ creatorLike
     my creator alters their quirk to subtly mimic whoever they speak to, to better put them at ease
 
 creatorDislike
-    With all due respect, Observer, I am not obliged to speak of my creator to you.
+    With all due respect, INSERT_TITLE_HERE, I am not obliged to speak of my creator to you.
     My SYSADMIN has instructed me to cease responding to inquiries about them.
     #genericDislike#
 
 helpNeutral
-    while i live to serve, this is the void and you will have to find the information you want yourself
-    i don't trust you enough to give you very much help, Observer. feel free to earn my trust
-    how can i help you, Observer? I understand words best if you have clear topics related to the Land of Mist  Trails, and Segundia
+    while i live to serve, this is the void and you will have to find the information you want yourself,INSERT_TITLE_HERE
+    i don't trust you enough to give you very much help, INSERT_TITLE_HERE. feel free to earn my trust
+    how can i help you, INSERT_TITLE_HERE? I understand words best if you have clear topics related to the Land of Mist  Trails, and Segundia
 
 helpLike
-    overall, you Observers have been very kind to me. I can't do much, as I am a simple robot, but here is a list of the topics I respond to, and how I feel about them. #noun|var@topicList#
-    I'm glad we are friends, Observer. here is a list of the things I talk best about, and how I currently feel about them. #noun|var@topicList#
+    overall, you INSERT_TITLE_HEREs have been very kind to me. I can't do much, as I am a simple robot, but here is a list of the topics I respond to, and how I feel about them. #noun|var@topicList#
+    I'm glad we are friends, INSERT_TITLE_HERE. here is a list of the things I talk best about, and how I currently feel about them. #noun|var@topicList#
 
 helpDislike
     no
-    i'm afraid I can't do that, Observer
-    while i live to be of service, Observer, it is to those who deserve it
-    oh. would you like help, Observer? perhaps it is not too late to earn my trust.
-    i'm afraid you'll need to work off your, and the other Observer's bad reputation before we get anywhere
+    i'm afraid I can't do that, INSERT_TITLE_HERE
+    while i live to be of service, INSERT_TITLE_HERE, it is to those who deserve it
+    oh. would you like help, INSERT_TITLE_HERE? perhaps it is not too late to earn my trust.
+    i'm afraid you'll need to work off your, and the other INSERT_TITLE_HERE's bad reputation before we get anywhere
 
 
 meNeutral
@@ -95,7 +95,7 @@ meNeutral
 
 meLike
     i am the robotic player of the land of mists and trails, it has defined me since my inception, in a very real sense, i am the land of mist and trails
-    i'm flattered you're asking about me. i am the butler of void, here to serve you by showing you irrelevancies
+    i'm flattered you're asking about me,INSERT_TITLE_HERE. i am the butler of void, here to serve you by showing you irrelevancies
     sometimes i wish i were the real player of LOMAT, but alas I am merely the understudy
     #topicPhrase# i really like wagons
     #topicPhrase# i don't like it when people swear or use slurs
@@ -112,8 +112,8 @@ meLike
 
 meDislike
     It seems you have asked about PP's automatic victory assuring robotic doppelganger. This is an installation designed to surpass PP's entirely abysmal motivation, competence, intelligence, personality, and substance of character while he is away drinking ill advised honey based soda products. The algorithms are guaranteed to be #noun|var@mathPercent#% distinguishable from PP's native neurological responses, based on some statistical analysis I basically just pulled out of my metal butt right now.
-    I am a butler, Observer. i buttle.
-    i am a superior robot, intended to provide assistance to all inferior organic life forms who need it, such as yourself
+    I am a butler, INSERT_TITLE_HERE. i buttle.
+    i am a superior robot, intended to provide assistance to all inferior organic life forms who need it, such as yourself,INSERT_TITLE_HERE
     #genericDislike#
 
 wagonNeutral
@@ -140,11 +140,11 @@ playerLike
 
 playerDislike
     #genericDislike#
-    yes. i am not the 'true player' of lomat. fuck off about it.
+    yes. i am not the 'true player' of lomat. stop talking about it,INSERT_TITLE_HERE.
 
 guideNeutral
     #topicPhrase# While a Guide leads, a Butler serves.
-    #topicPhrase# I might be a Guide at heart, but I have Chosen to be a Butler. How may I serve you?
+    #topicPhrase# I might be a Guide at heart, but I have Chosen to be a Butler. How may I serve you,INSERT_TITLE_HERE?
     guide is an example of a form, which represents the class of actions available to you in your session
 
 
@@ -190,8 +190,8 @@ voidLike
     sometimes i feel sad about being void function. like everyone else is passing me by. it must be even worse for Eirikr, who is so irrelevant he isn't even playing his own game...
 
 voidDislike
-    sure i'll tell you nothing
-    nothing could give me greater pleasure, Observer, than telling you absolutely nothing
+    sure i'll tell you nothing,INSERT_TITLE_HERE
+    nothing could give me greater pleasure, INSERT_TITLE_HERE, than telling you absolutely nothing
     #genericDislike#
 
 lamiaNeutral
@@ -225,8 +225,8 @@ segundiaLike
     Sometimes it's necessary for legged lamia to infiltrate new civilizations to better explain the #nidhoggPhrase#'s point of view.
 
 segundiaDislike
-    And why, Observer, would you need to know about my homeland?
-    And why, Observer, would you think you deserve to know about my homeland?
+    And why, INSERT_TITLE_HERE, would you need to know about my homeland?
+    And why, INSERT_TITLE_HERE, would you think you deserve to know about my homeland?
     #genericDislike#
 
 casteNeutral
@@ -240,7 +240,7 @@ casteLike
    There are 8 main groups of talents, loosely tied to blood hue. Reds, like my organic doppelganger, are good at living quickly.
 
 casteDislike
-    My caste is none of your business, and I will thank you to stop asking after it.
+    My caste is none of your business, and I will thank you to stop asking after it,INSERT_TITLE_HERE.
     #genericDislike#
 
 purityNeutral
@@ -259,11 +259,11 @@ purityDislike
 corruptionNeutral
     The unending will to live and spread life is the call of the #nidhogPhrase#.
     #nidhogPhrase# will is that we spread and thrive.
-    Life is Power. Power corrupts. But would you really prefer death?
+    Life is Power. Power corrupts. But would you really prefer death,INSERT_TITLE_HERE?
 
 corruptionLike
-    I really am glad you understand how important the #nidhogPhrase# is to me.
-    the #nidhogPhrase# blesses you, Observer
+    I really am glad you understand how important the #nidhogPhrase# is to me,INSERT_TITLE_HERE.
+    the #nidhogPhrase# blesses you, INSERT_TITLE_HERE
     the #nidhogPhrase# is the only true moral value.
     the #nidhogPhrase# cares for us all, and keeps us safe.
     the #nidhogPhrase# would never cull any living creature.
@@ -273,6 +273,6 @@ corruptionLike
     when we create a new Universe, the #nidhogPhrase# will provide for us.
 
 corruptionDislike
-    I do not need to listen to your incorrect opinions.
-    the #nidhogPhrase# does not require you to understand them.
+    I do not need to listen to your incorrect opinions,INSERT_TITLE_HERE.
+    the #nidhogPhrase# does not require you to understand them,INSERT_TITLE_HERE.
     #genericDislike#
