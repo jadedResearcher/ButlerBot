@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65da64d1-52e0-4b4c-9df4-bb299c3da222" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bin/Subjects/Feelings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/Feelings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello_butler_bot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hello_butler_bot.txt" afterDir="false" />
-    </list>
+    <list default="true" id="65da64d1-52e0-4b4c-9df4-bb299c3da222" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/Subjects/Feelings.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="287">
@@ -35,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+            <state relative-caret-position="219">
+              <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
               <folding>
                 <element signature="e#104#132#0" expanded="true" />
               </folding>
@@ -206,9 +203,9 @@
         <option value="$PROJECT_DIR$/bin/Subjects/Topic.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/FuckEngine.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/OpinionEngine.dart" />
-        <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/Feelings.dart" />
+        <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
       </list>
     </option>
   </component>
@@ -582,16 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
-          <folding>
-            <element signature="e#104#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -608,6 +595,16 @@
           <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
           <folding>
             <element signature="e#135#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+          <folding>
+            <element signature="e#104#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
