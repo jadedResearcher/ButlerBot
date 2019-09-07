@@ -64,7 +64,7 @@ class Suspicion {
 
     String deliverMusings() {
         boost();
-        return new Random().pickFrom(musings);
+        return "Level: $level ${new Random().pickFrom(musings)}";
     }
 
     void thinkAbout(String input) {

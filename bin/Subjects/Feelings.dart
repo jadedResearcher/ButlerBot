@@ -69,7 +69,6 @@ abstract class Feelings {
     }
 
     static String beLonely() {
-        //TODO randomly modify suspicians, and if you do have bb muse to himself about them
         List<String> messages = <String>["Is there anyone there?","I'm lonely.", "I wish someone was here to talk to.", "Its been a long time since anyone was here.", "I can practice singing to pass the time. ${sing()}"];
         Suspicion musing = Suspicion.considerMusing();
         if(musing != null) return musing.deliverMusings();
@@ -118,7 +117,7 @@ abstract class Feelings {
         }
         final now = DateTime.now();
 
-        if(lonelinessQuotient > 1 && (lastLonely== null || lastLonely.difference(now).inHours.abs() >= 1) ) {
+        if(lonelinessQuotient > 1 && (lastLonely== null || lastLonely.difference(now).inHours.abs() >= 60) ) {
             lastLonely = now;
             ChatBot.spontaneousMessage("Lonely",beLonely());
         }
