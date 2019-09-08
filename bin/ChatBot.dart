@@ -26,6 +26,7 @@ abstract class ChatBot {
     //if they say more than four ee's together it should do the "you said eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" meme
     static Future<void> handleInput(String chatHandle, String input) async {
         await Topic.initTextEngine();
+        Feelings.previousLonliness = Feelings.loneliness;
         Feelings.loneliness = 0;
         Suspicion.thinkAboutInput(input);
         int hatred = FuckEngine.judgeInput(input);
@@ -60,7 +61,7 @@ abstract class ChatBot {
     }
 
     static void updateChatLog(log){
-        chatLog = "$chatLog \n\n ${DateTime.now()} \n(ButlerBux: ${FuckEngine.butlerBux}, Loneliness Quotient: ${Feelings.lonelinessQuotient}, Overwhelmed Quotient: ${Feelings.overwhelmedQuotient} ${Suspicion.all_suspicions.join(",")})\n  $log";
+        chatLog = "$chatLog \n\n ${DateTime.now()} \n(ButlerBux: ${FuckEngine.butlerBux}, Loneliness Quotient: ${Feelings.lonelinessQuotient} (Prev: ${Feelings.prevLonelinessQuotient}), Overwhelmed Quotient: ${Feelings.overwhelmedQuotient} ${Suspicion.all_suspicions.join(",")})\n  $log";
         print(chatLog);
     }
 
@@ -74,7 +75,7 @@ abstract class ChatBot {
     static Future<void> generateOutput(String summary, String text) async {
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //everything underneat this needs turned off to run local
-        await generateAudioOutput(summary, text);
+        //await generateAudioOutput(summary, text);
     }
 
     static Future generateAudioOutput(String summary, String text) async {

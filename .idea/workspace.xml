@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65da64d1-52e0-4b4c-9df4-bb299c3da222" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ChatBot.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ChatBot.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Subjects/Feelings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/Feelings.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Subjects/Suspicion.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Subjects/Suspicion.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello_butler_bot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hello_butler_bot.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/Subjects/Feelings.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+            <state relative-caret-position="289">
+              <caret line="69" column="87" selection-start-line="69" selection-start-column="87" selection-end-line="69" selection-end-column="87" />
               <folding>
                 <element signature="e#135#155#0" expanded="true" />
               </folding>
@@ -25,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/Subjects/Suspicion.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+            <state relative-caret-position="304">
+              <caret line="88" column="75" selection-start-line="88" selection-start-column="75" selection-end-line="88" selection-end-column="75" />
               <folding>
                 <element signature="e#891#930#0" expanded="true" />
               </folding>
@@ -41,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="355">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+              <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
               <folding>
                 <element signature="e#104#132#0" expanded="true" />
               </folding>
@@ -141,8 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>butler island</find>
-      <find>i'm glad we</find>
       <find>noun</find>
       <find>#noun#</find>
       <find>textEngine</find>
@@ -169,7 +171,9 @@
       <find>lonely</find>
       <find>mili</find>
       <find>inSe</find>
+      <find>break</find>
       <find>toString</find>
+      <find>lonlin</find>
       <find>chatlog</find>
     </findStrings>
     <replaceStrings>
@@ -211,9 +215,9 @@
         <option value="$PROJECT_DIR$/bin/Subjects/SecretSubjects.dart" />
         <option value="$PROJECT_DIR$/bin/tts_server.dart" />
         <option value="$PROJECT_DIR$/bin/wordlists/topicResponses.words" />
-        <option value="$PROJECT_DIR$/bin/Subjects/Feelings.dart" />
-        <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
         <option value="$PROJECT_DIR$/bin/Subjects/Suspicion.dart" />
+        <option value="$PROJECT_DIR$/bin/ChatBot.dart" />
+        <option value="$PROJECT_DIR$/bin/Subjects/Feelings.dart" />
       </list>
     </option>
   </component>
@@ -590,12 +594,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Subjects/Feelings.dart">
+    <entry file="file://$PROJECT_DIR$/bin/Subjects/Suspicion.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+        <state relative-caret-position="304">
+          <caret line="88" column="75" selection-start-line="88" selection-start-column="75" selection-end-line="88" selection-end-column="75" />
           <folding>
-            <element signature="e#135#155#0" expanded="true" />
+            <element signature="e#891#930#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -603,19 +607,19 @@
     <entry file="file://$PROJECT_DIR$/bin/ChatBot.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
           <folding>
             <element signature="e#104#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Subjects/Suspicion.dart">
+    <entry file="file://$PROJECT_DIR$/bin/Subjects/Feelings.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+        <state relative-caret-position="289">
+          <caret line="69" column="87" selection-start-line="69" selection-start-column="87" selection-end-line="69" selection-end-column="87" />
           <folding>
-            <element signature="e#891#930#0" expanded="true" />
+            <element signature="e#135#155#0" expanded="true" />
           </folding>
         </state>
       </provider>

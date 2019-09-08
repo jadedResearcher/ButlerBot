@@ -30,7 +30,10 @@ abstract class Feelings {
     //have to make a list because iterable is lazy apparently. lame.
     static double get  overwhelmedQuotient =>activityIn15Minutes.map((String str) => str.length).fold(0,(value, element) => value +element)/overwhelmedThreshold;
     static double get lonelinessQuotient => loneliness/lonelinessThreshold;
+    static double get prevLonelinessQuotient => previousLonliness/lonelinessThreshold;
+
     static int loneliness =0; //goes to zero as soon as he's messaged
+    static int previousLonliness = 0; //just for debugging
     static int lonelinessThreshold = (4*60/15).ceil(); //if no one has talked to bb in 4 hours, he should talk to himself
 
     static void waitForThings(){
@@ -64,7 +67,7 @@ abstract class Feelings {
         if(panicky) {
             return "Please. I. I. I. I need a break. I need to stop. I'll be back.";
         }
-        List<String> messages = <String>["Please wait, ${Feelings.titlePlaceholder}. I am currently on my 15 minute break.","I will be ready to resume after my 15 minute break, ${Feelings.titlePlaceholder}.","Please be patient. I am currently on my 15 minute break, ${Feelings.titlePlaceholder}."];
+        List<String> messages = <String>["Sometimes, I join the robotic version of that weird alien on LOMAT to read fiction of a fan variety.","Please wait, ${Feelings.titlePlaceholder}. I am currently on my 15 minute break.","I will be ready to resume after my 15 minute break, ${Feelings.titlePlaceholder}.","Please be patient. I am currently on my 15 minute break, ${Feelings.titlePlaceholder}."];
         return new Random().pickFrom(messages);
     }
 
