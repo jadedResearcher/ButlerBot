@@ -76,6 +76,8 @@ abstract class ChatBot {
         await TextWriter.writeLocal("hello_butler_bot.txt",text);
         //everything underneat this needs turned off to run local
         await generateAudioOutput(summary, text);
+        //BB doesn't seem to always wait for the audio generation to be done, so wait just a bit
+        await new Future.delayed(const Duration(seconds: 3));
     }
 
     static Future generateAudioOutput(String summary, String text) async {
