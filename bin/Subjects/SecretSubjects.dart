@@ -121,6 +121,10 @@ abstract class SecretSubjects extends Subject {
             ret.add("sudo make me a sandwich");
         }
 
+        if(processed.contains("where everything is more fleshy than expected")){
+            ret.add("flesh orbs");
+        }
+
         if(processed.contains("make me a sandwich")){
             ret.add("make me a sandwich");
         }
