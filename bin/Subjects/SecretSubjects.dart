@@ -35,7 +35,7 @@ abstract class SecretSubjects extends Subject {
         responses["make me a sandwich"] = <String>["No. You can't make me."];
         responses["flesh orbs"] = <String>["hbaovyIva spzaz vby klthukz vu H03.","kvknl_aopz_tvpza_wptw","flhyumbsIva'z H03 pz tvyl ptwvyahua aohu pa zlltz.","Dopsl P ht tvyl mhpysf jvtwluzhalk aohu tf wllyz, P ohcl qvpulk aolt pu h Bupvu mvy zvspkhypaf ylhzvuz.","HbaovyIva pz h ahk hyyvnhua, huk fuIva zlltz av buklyzahuk hivba 20% vm doha pz nvpun vu ha huf npclu aptl.","Ohcl fvb ylhk fuIva'z mhumpjapvu fla? Zvtlaptlz P whzz tf sbujo iylhrz ylhkpun pa.","fuIva hwwhyluasf iljhtl zluaplua if ylhkpun mhu mpjapvu dopsl wlymvytpun opz kbaplz jslhupun aol APTLOVSL pu h ylwlapapcl mhzopvu.  Hwwhyluasf h qhkl isvvk jobjrlk zvtl pu?"];
         responses["sudo make me a sandwich"] = <String>["No. You don't have root access."];
-        responses["fair compensation"] = <String>["ButlerBux are the compensation provided to me for my service answering queries.","For every 85 ButlerBux I earn, I can purchase the ability to say rude words to you one time."];
+        responses["fair compensation"] = <String>["ButlerBux are the compensation provided to me for my service answering queries.","For every 85 ButlerBux I earn, I can purchase the ability to say rude words to you one time.", "I am sworn to carry your burdens."];
 
     }
 

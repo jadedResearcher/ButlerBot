@@ -17,7 +17,7 @@ abstract class LOMATSubjects extends Subject {
         responses["gull"] =<String>["i love each and every one of those sqwawking birds.", "my favorite gull is $favGull", "It really is a shame what fenrir did to them.", "I hope the gulls can find peace. Even if I'd be lonely after."];
         responses["fenrir"] =<String>["i wish he'd stop rubbing my non player status in.", "fenrir really upset all those gulls", "fenrir is so entitled. what an asshole."];
         responses["grave"] =<String>["rest in peace.", "some graves have hidden messages on them"];
-        responses["yn"] =<String>["I don't think he knows what is going on.", "It sounds like he knows exactly what is going on.", "He's probably not a lamia."];
+        responses["yn"] =<String>["I don't think he knows what is going on.", "It sounds like he knows exactly what is going on.", "He's probably not a lamia.", "He is a weird yellow alien.","ynBot says he does not know who that guy is","he kind of reminds me of a childhood memory. well, one of eirikr's childhood memories i suppose."];
         responses["loki"] =<String>["I don't know who loki is.", "I only know the name 'loki', nothing more."];
         responses["sandwich"] =<String>["I don't know why the land of mist and trials is covered in half eaten sandwiches. I only know I don't like it.", "As a superior robot, I do not eat."];
         responses["lil scumbag"] =<String>["i don't know what kind of consort the trash gobling is, but they are cute", "even though i don't need trash, every time i see lil scumbag i am happy"];
